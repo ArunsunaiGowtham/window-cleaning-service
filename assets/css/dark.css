@@ -311,37 +311,67 @@
   color: #94a3b8 !important;
 }
 
-[data-bs-theme="dark"] .dash-sidebar-ref .ref-nav-btn {
+[data-bs-theme="dark"] #sidebarOffcanvas {
+  background: #0f1b2b !important;
+  color: #f8fafc !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-bs-theme="dark"] #sidebarOffcanvas .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+[data-bs-theme="dark"] #sidebarOffcanvas strong,
+[data-bs-theme="dark"] .user-name-label {
+  color: #f8fafc !important;
+}
+
+[data-bs-theme="dark"] .dash-sidebar-ref .ref-nav-btn,
+[data-bs-theme="dark"] #sidebarOffcanvas .ref-nav-btn,
+[data-bs-theme="dark"] .ref-nav-btn {
   color: #cbd5e1 !important;
   background: transparent !important;
 }
 
-[data-bs-theme="dark"] .dash-sidebar-ref .ref-nav-btn i {
+[data-bs-theme="dark"] .dash-sidebar-ref .ref-nav-btn i,
+[data-bs-theme="dark"] #sidebarOffcanvas .ref-nav-btn i,
+[data-bs-theme="dark"] .ref-nav-btn i {
   color: #94a3b8 !important;
 }
 
-[data-bs-theme="dark"] .dash-sidebar-ref .ref-nav-btn:hover:not(.active) {
+[data-bs-theme="dark"] .dash-sidebar-ref .ref-nav-btn:hover:not(.active),
+[data-bs-theme="dark"] #sidebarOffcanvas .ref-nav-btn:hover:not(.active),
+[data-bs-theme="dark"] .ref-nav-btn:hover:not(.active) {
   background: rgba(255, 255, 255, 0.08) !important;
   color: #38bdf8 !important;
 }
 
-[data-bs-theme="dark"] .dash-sidebar-ref .ref-nav-btn:hover:not(.active) i {
+[data-bs-theme="dark"] .dash-sidebar-ref .ref-nav-btn:hover:not(.active) i,
+[data-bs-theme="dark"] #sidebarOffcanvas .ref-nav-btn:hover:not(.active) i,
+[data-bs-theme="dark"] .ref-nav-btn:hover:not(.active) i {
   color: #38bdf8 !important;
 }
 
-[data-bs-theme="dark"] .dash-sidebar-ref .ref-nav-btn.active {
+[data-bs-theme="dark"] .dash-sidebar-ref .ref-nav-btn.active,
+[data-bs-theme="dark"] #sidebarOffcanvas .ref-nav-btn.active,
+[data-bs-theme="dark"] .ref-nav-btn.active {
   background: #0284c7 !important;
   color: #ffffff !important;
   box-shadow: 0 4px 14px rgba(2, 132, 199, 0.4) !important;
 }
 
-[data-bs-theme="dark"] .dash-sidebar-ref .ref-nav-btn.active i {
+[data-bs-theme="dark"] .dash-sidebar-ref .ref-nav-btn.active i,
+[data-bs-theme="dark"] #sidebarOffcanvas .ref-nav-btn.active i,
+[data-bs-theme="dark"] .ref-nav-btn.active i {
   color: #ffffff !important;
 }
 
 [data-bs-theme="dark"] .dash-sidebar-ref .ref-nav-btn.active .ref-badge-blue,
 [data-bs-theme="dark"] .dash-sidebar-ref .ref-nav-btn.active .ref-badge-green,
-[data-bs-theme="dark"] .dash-sidebar-ref .ref-nav-btn.active .ref-badge-red {
+[data-bs-theme="dark"] .dash-sidebar-ref .ref-nav-btn.active .ref-badge-red,
+[data-bs-theme="dark"] #sidebarOffcanvas .ref-nav-btn.active .ref-badge-blue,
+[data-bs-theme="dark"] #sidebarOffcanvas .ref-nav-btn.active .ref-badge-green,
+[data-bs-theme="dark"] #sidebarOffcanvas .ref-nav-btn.active .ref-badge-red {
   background: rgba(255, 255, 255, 0.25) !important;
   color: #ffffff !important;
 }
@@ -403,15 +433,22 @@
   color: #f87171 !important;
 }
 
-[data-bs-theme="dark"] .dash-sidebar-ref .dossier-card {
+[data-bs-theme="dark"] .dash-sidebar-ref .dossier-card,
+[data-bs-theme="dark"] #sidebarOffcanvas .dossier-card {
   background: #142337 !important;
   border-color: rgba(255, 255, 255, 0.08) !important;
 }
 
-[data-bs-theme="dark"] .dash-sidebar-ref .dossier-select {
+[data-bs-theme="dark"] .dash-sidebar-ref .dossier-select,
+[data-bs-theme="dark"] #sidebarOffcanvas .dossier-select {
   background: #0f1b2b !important;
   border-color: rgba(255, 255, 255, 0.12) !important;
   color: #f1f5f9 !important;
+}
+
+[data-bs-theme="dark"] .dash-sidebar-ref .dossier-label,
+[data-bs-theme="dark"] #sidebarOffcanvas .dossier-label {
+  color: #94a3b8 !important;
 }
 
 /* Tab Panels in Dark Mode */
