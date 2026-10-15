@@ -4974,7 +4974,7 @@ h6 {
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-.dash-sidebar-ref {
+.dash-sidebar-ref:not(.offcanvas) {
   width: 260px;
   flex: 0 0 260px;
   background: #ffffff;
@@ -4987,6 +4987,24 @@ h6 {
   display: flex;
   flex-direction: column;
   z-index: 30;
+}
+
+.offcanvas.dash-sidebar-ref,
+#sidebarOffcanvas {
+  z-index: 1050 !important;
+}
+
+#sidebarOffcanvas .btn-close {
+  min-width: 44px;
+  min-height: 44px;
+  cursor: pointer;
+  touch-action: manipulation;
+  opacity: 0.8;
+}
+
+#sidebarOffcanvas .btn-close:hover,
+#sidebarOffcanvas .btn-close:focus {
+  opacity: 1;
 }
 
 .dash-sidebar-ref .brand-box {
@@ -5104,6 +5122,8 @@ h6 {
   white-space: nowrap !important;
   cursor: pointer !important;
   box-shadow: none !important;
+  min-height: 44px !important;
+  touch-action: manipulation;
 }
 
 .dash-sidebar-ref .ref-nav-btn:hover:not(.active),
@@ -5477,9 +5497,16 @@ h6 {
     display: none !important;
   }
 
-  .offcanvas.dash-sidebar-ref {
+  .offcanvas.dash-sidebar-ref,
+  #sidebarOffcanvas {
+    position: fixed !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
     width: 290px !important;
     max-width: 85vw !important;
+    z-index: 1050 !important;
+    height: 100vh !important;
   }
 
   .dash-topbar-ref {
