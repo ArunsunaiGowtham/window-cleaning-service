@@ -1,0 +1,1178 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Window Cleaning Dashboard | CrystalClean Customer Portal</title>
+  <meta name="description" content="Live pure-water TDS telemetry, field crew dispatch & streak-free quality milestones for CrystalClean window cleaning clients.">
+  <link rel="canonical" href="customer-dashboard.html">
+  <meta name="theme-color" content="#0ea5e9">
+  <link rel="icon" href="assets/images/logo/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+<div class="preloader" id="preloader" aria-hidden="true"><div class="preloader-bubble"></div><span class="visually-hidden">Loading</span></div>
+<a class="skip-link" href="#mainContent">Skip to main content</a>
+
+<div class="dash-shell-ref">
+
+  <!-- ======================== LEFT SIDEBAR ======================== -->
+  <aside class="dash-sidebar-ref" id="dashboardSidebar" aria-label="Dashboard navigation">
+    <!-- Brand Logo: CrystalClean Window Cleaning -->
+    <a class="brand-box" href="#tabViewDashboard" data-bs-target="#tabViewDashboard" aria-label="CrystalClean Home">
+      <div class="brand-icon-sq" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+        </svg>
+      </div>
+      <div>
+        <span class="brand-title">CrystalClean</span>
+        <span class="brand-sub">Window &amp; Exterior Care</span>
+      </div>
+    </a>
+
+    <!-- Active Service Account / Job Selector -->
+    <div class="dossier-card">
+      <div class="dossier-label">
+        <i class="bi bi-card-checklist" aria-hidden="true"></i> Active Service Job
+      </div>
+      <select class="dossier-select" id="serviceJobSelect" aria-label="Select Active Service Job">
+        <option value="CC-4821" selected>Job #CC-4821 (Oakridge Estate)</option>
+        <option value="CC-4822">Job #CC-4822 (Riverside Commercial)</option>
+        <option value="CC-4830">Job #CC-4830 (Sunset Bay Plaza)</option>
+      </select>
+    </div>
+
+    <!-- Navigation Group 1: Window Cleaning Hub -->
+    <p class="nav-cat-label">Window Cleaning Hub</p>
+    <ul class="ref-nav" role="tablist">
+      <li>
+        <button class="ref-nav-btn active" data-bs-toggle="tab" data-bs-target="#tabViewDashboard" type="button" role="tab" aria-selected="true">
+          <i class="bi bi-grid-fill" aria-hidden="true"></i> Dashboard
+        </button>
+      </li>
+      <li>
+        <button class="ref-nav-btn" data-bs-toggle="tab" data-bs-target="#tabViewCrew" type="button" role="tab" aria-selected="false">
+          <i class="bi bi-calendar2-check" aria-hidden="true"></i> Crew Dispatch
+          <span class="ref-badge ref-badge-blue">1 Next</span>
+        </button>
+      </li>
+      <li>
+        <button class="ref-nav-btn" data-bs-toggle="tab" data-bs-target="#tabViewPipeline" type="button" role="tab" aria-selected="false">
+          <i class="bi bi-kanban" aria-hidden="true"></i> Service Pipeline
+        </button>
+      </li>
+      <li>
+        <button class="ref-nav-btn" data-bs-toggle="tab" data-bs-target="#tabViewTelemetry" type="button" role="tab" aria-selected="false">
+          <i class="bi bi-droplet-half" aria-hidden="true"></i> Water Purity Telemetry
+          <span class="ref-badge ref-badge-green">0 PPM</span>
+        </button>
+      </li>
+      <li>
+        <button class="ref-nav-btn" data-bs-toggle="tab" data-bs-target="#tabViewGuarantee" type="button" role="tab" aria-selected="false">
+          <i class="bi bi-shield-check" aria-hidden="true"></i> Warranty &amp; Insurance
+        </button>
+      </li>
+      <li>
+        <button class="ref-nav-btn" data-bs-toggle="tab" data-bs-target="#tabViewEmergency" type="button" role="tab" aria-selected="false">
+          <i class="bi bi-telephone-plus" aria-hidden="true"></i> Priority Service
+          <span class="ref-badge ref-badge-red">24/7</span>
+        </button>
+      </li>
+    </ul>
+
+    <!-- Navigation Group 2: Billing & Account -->
+    <p class="nav-cat-label mt-3">Billing &amp; Account</p>
+    <ul class="ref-nav" role="tablist">
+      <li>
+        <button class="ref-nav-btn" data-bs-toggle="tab" data-bs-target="#tabViewCarrier" type="button" role="tab" aria-selected="false">
+          <i class="bi bi-credit-card-2-front" aria-hidden="true"></i> Invoices &amp; Payments
+        </button>
+      </li>
+      <li>
+        <button class="ref-nav-btn" data-bs-toggle="tab" data-bs-target="#tabViewEstimates" type="button" role="tab" aria-selected="false">
+          <i class="bi bi-file-earmark-ruled" aria-hidden="true"></i> Service Estimates
+        </button>
+      </li>
+      <li>
+        <button class="ref-nav-btn" data-bs-toggle="tab" data-bs-target="#tabViewProfile" type="button" role="tab" aria-selected="false">
+          <i class="bi bi-person" aria-hidden="true"></i> My Profile
+        </button>
+      </li>
+      <li>
+        <button class="ref-nav-btn ref-nav-signout" type="button" id="sidebarNavSignoutBtn" data-auth-logout aria-label="Sign out">
+          <i class="bi bi-box-arrow-right" aria-hidden="true"></i> Sign Out
+        </button>
+      </li>
+    </ul>
+
+    <!-- User Profile Footer -->
+    <div class="mt-auto pt-3 border-top d-flex align-items-center gap-2 user-profile-footer">
+      <div class="d-flex align-items-center gap-2 text-truncate">
+        <img src="assets/images/avatars/customer-01.webp" class="rounded-circle flex-shrink-0" width="36" height="36" alt="Jordan Blake" onerror="this.src='https://ui-avatars.com/api/?name=Jordan+Blake&background=0284c7&color=fff'">
+        <div class="small text-truncate">
+          <strong class="d-block text-truncate" style="color:var(--sp-ink)">Jordan Blake</strong>
+          <span class="text-muted d-block text-truncate" style="font-size:0.75rem">Account #CC-89104</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ======================== MAIN VIEW AREA ======================== -->
+  <div class="dash-main-ref">
+
+    <!-- Topbar (Exact match to reference) -->
+    <header class="dash-topbar-ref">
+      <div class="d-flex align-items-center gap-2 gap-md-3">
+        <button class="icon-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas" aria-label="Toggle navigation">
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="search-pill">
+          <i class="bi bi-search text-muted" aria-hidden="true"></i>
+          <input type="search" placeholder="Search jobs, invoices, logs..." id="refDashSearch" aria-label="Search jobs and logs">
+        </div>
+        <div class="dropdown d-none d-sm-block">
+          <div class="job-pill dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" role="button" tabindex="0">
+            <span id="topbarJobPillText">#CC-4821</span>
+          </div>
+          <ul class="dropdown-menu" id="topbarJobDropdown">
+            <li><a class="dropdown-item active" href="javascript:void(0)" data-job-id="CC-4821">#CC-4821 &middot; Oakridge Residential</a></li>
+            <li><a class="dropdown-item" href="javascript:void(0)" data-job-id="CC-4822">#CC-4822 &middot; Riverside Commercial</a></li>
+            <li><a class="dropdown-item" href="javascript:void(0)" data-job-id="CC-4830">#CC-4830 &middot; Sunset Bay Plaza</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <button class="icon-btn" type="button" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+          <i class="bi bi-moon" aria-hidden="true"></i>
+        </button>
+        <button class="dir-toggle-pill" type="button" id="dirToggle" data-dir-toggle aria-label="Switch text direction">
+          <svg class="dir-toggle-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16M15 4l5 4-5 4M20 16H4M9 12l-5 4 5 4"/></svg>
+          <span class="dir-toggle-text" aria-hidden="true">RTL</span>
+        </button>
+        <a class="back-web-btn" href="index.html">
+          <i class="bi bi-arrow-left" aria-hidden="true"></i> Back to Website
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="mainContent" class="ref-content-area">
+      <div class="tab-content">
+
+        <!-- ==================== 1. TAB: DASHBOARD (EXACT REFERENCE DESIGN) ==================== -->
+        <div class="tab-pane fade show active" id="tabViewDashboard" role="tabpanel">
+
+          <!-- Dashboard Title & Subtitle -->
+          <h1 class="ref-dash-title">Window Cleaning Dashboard</h1>
+          <p class="ref-dash-sub">Live pure-water TDS telemetry, field crew dispatch &amp; streak-free quality milestones.</p>
+
+          <!-- 4 KPI CARDS ROW (Exact match to reference styling and colors) -->
+          <div class="row g-3 g-xl-4 mb-4">
+            <!-- Card 1: Next Crew Dispatch -->
+            <div class="col-sm-6 col-xl-3">
+              <div class="ref-kpi-card">
+                <div>
+                  <div class="ref-kpi-header">
+                    <span class="ref-kpi-label">Next Crew Inspection</span>
+                    <span class="ref-kpi-icon ref-icon-green" aria-hidden="true"><i class="bi bi-calendar3"></i></span>
+                  </div>
+                  <div class="ref-kpi-val blue">Tomorrow, 10:00 AM</div>
+                </div>
+                <p class="ref-kpi-sub">
+                  <i class="bi bi-person-fill me-1" aria-hidden="true"></i> Marcus Vance (Lead Tech)
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2: Recovery / Quality Milestone -->
+            <div class="col-sm-6 col-xl-3">
+              <div class="ref-kpi-card">
+                <div>
+                  <div class="ref-kpi-header">
+                    <span class="ref-kpi-label">Recovery Milestone</span>
+                    <span class="ref-kpi-icon ref-icon-teal" aria-hidden="true"><i class="bi bi-suit-heart"></i></span>
+                  </div>
+                  <div class="ref-kpi-val blue">78% Complete</div>
+                </div>
+                <p class="ref-kpi-sub green">
+                  <i class="bi bi-arrow-up-right me-1" aria-hidden="true"></i> +12% this month
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3: Drying / Cleaning Equipment Deployed -->
+            <div class="col-sm-6 col-xl-3">
+              <div class="ref-kpi-card">
+                <div>
+                  <div class="ref-kpi-header">
+                    <span class="ref-kpi-label">Drying Equipment Deployed</span>
+                    <span class="ref-kpi-icon ref-icon-orange" aria-hidden="true"><i class="bi bi-clipboard-check"></i></span>
+                  </div>
+                  <div class="ref-kpi-val dark">7 <span class="fs-6 fw-bold text-muted">Active Units</span></div>
+                </div>
+                <p class="ref-kpi-sub text-truncate">
+                  2 Pure-Water RO Units &bull; 5 Ionic Air Dryers
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 4: Current Account Balance -->
+            <div class="col-sm-6 col-xl-3">
+              <div class="ref-kpi-card">
+                <div>
+                  <div class="ref-kpi-header">
+                    <span class="ref-kpi-label">Current Account Balance</span>
+                    <span class="ref-kpi-icon ref-icon-blue" aria-hidden="true"><i class="bi bi-file-earmark-text"></i></span>
+                  </div>
+                  <div class="ref-kpi-val dark">$0.00</div>
+                </div>
+                <p class="ref-kpi-sub green">
+                  <i class="bi bi-check-circle-fill me-1" aria-hidden="true"></i> Auto-Pay In-Network Paid
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- MIDDLE ROW: CHART (LEFT 8 COLS) + MILESTONES DONUT (RIGHT 4 COLS) -->
+          <div class="row g-3 g-xl-4 mb-4">
+            <!-- Left Chart Panel (Exact match to reference) -->
+            <div class="col-lg-8">
+              <div class="ref-panel">
+                <div class="ref-panel-header">
+                  <h2 class="ref-panel-title">
+                    <i class="bi bi-graph-up text-primary" aria-hidden="true"></i> Psychometric Moisture Reduction Curve (WME %)
+                  </h2>
+                  <span class="ref-pill-badge"><i class="bi bi-circle-fill fs-6 me-1 text-success" style="font-size:0.5rem !important"></i> Active Progress</span>
+                </div>
+
+                <div class="d-flex align-items-center gap-2 mb-3 small">
+                  <span class="badge border" style="background:#f0f9ff; color:#0369a1; border-color:#bae6fd !important;">
+                    <i class="bi bi-square me-1 text-primary"></i> Wood Moisture Equivalent (WME %) vs. Dry Baseline (&lt;12%)
+                  </span>
+                </div>
+
+                <!-- ApexCharts Interactive Area Chart Container -->
+                <div id="psychometricReductionChart" style="min-height: 290px;"></div>
+              </div>
+            </div>
+
+            <!-- Right Milestones Panel (Exact match to reference) -->
+            <div class="col-lg-4">
+              <div class="ref-panel d-flex flex-column justify-content-between">
+                <div>
+                  <div class="ref-panel-header mb-2">
+                    <h2 class="ref-panel-title">
+                      <i class="bi bi-pie-chart text-primary" aria-hidden="true"></i> Restoration Milestones
+                    </h2>
+                  </div>
+
+                  <!-- Circular Radial Progress Donut Chart (78% Complete) -->
+                  <div id="restorationMilestoneChart" style="min-height: 240px;" class="d-flex justify-content-center"></div>
+
+                  <!-- Legend -->
+                  <div class="d-flex align-items-center justify-content-center gap-2 mt-2">
+                    <span style="display:inline-block; width:12px; height:12px; background:#0284c7; border-radius:3px;"></span>
+                    <strong class="small" style="color:var(--sp-ink)">Restoration Completed</strong>
+                  </div>
+                </div>
+
+                <!-- Milestones Checklist -->
+                <ul class="activity-list mt-3 pt-3 border-top">
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success" aria-hidden="true"></i>
+                    <div>
+                      <strong style="color:var(--sp-ink)">Initial Extraction &amp; Water Detailing</strong>
+                      <small>Bulk water removed from affected glass &amp; sills</small>
+                    </div>
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success" aria-hidden="true"></i>
+                    <div>
+                      <strong style="color:var(--sp-ink)">7 Drying Units Deployed &amp; Verified</strong>
+                      <small>Balanced airflow CFM and moisture capture online</small>
+                    </div>
+                  </li>
+                  <li>
+                    <i class="bi bi-clock-history text-primary" aria-hidden="true"></i>
+                    <div>
+                      <strong style="color:var(--sp-ink)">Final Thermal Imaging &amp; Sign-off</strong>
+                      <small>Scheduled for tomorrow at 10:00 AM</small>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Summary Actions -->
+          <div class="ref-panel">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+              <div>
+                <h2 class="h5 mb-0" style="color:var(--sp-ink)"><i class="bi bi-shield-lock text-primary me-2"></i>Field Crew &amp; Safety Compliance</h2>
+                <small class="text-muted">Job #CC-4821 &middot; Lead Tech: <strong>Marcus Vance</strong> &middot; Direct Billing Settled &middot; Fully Insured ($5M)</small>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-sm btn-outline-brand" type="button" data-bs-toggle="modal" data-bs-target="#rescheduleModal">
+                  <i class="bi bi-calendar-event me-1"></i> Reschedule Crew
+                </button>
+                <button class="btn btn-sm btn-brand" type="button" onclick="alert('Demo: Downloading CrystalClean Certified Service Audit PDF.');">
+                  <i class="bi bi-file-earmark-pdf me-1"></i> Download Dossier PDF
+                </button>
+              </div>
+            </div>
+            <div class="row g-3">
+              <div class="col-md-4">
+                <div class="p-3 rounded-3 bg-light border">
+                  <small class="text-muted d-block">Property Address</small>
+                  <strong class="d-block" style="color:var(--sp-ink)">42 Willow Lane, Springfield</strong>
+                  <span class="badge bg-success-subtle text-success mt-1">Active Residential Account</span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 rounded-3 bg-light border">
+                  <small class="text-muted d-block">Moisture Extraction Target</small>
+                  <strong class="d-block" style="color:var(--sp-ink)">Dry Standard &lt; 12.0% WME</strong>
+                  <span class="badge bg-info-subtle text-primary mt-1">Current: 10.8% Target Met</span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="p-3 rounded-3 bg-light border">
+                  <small class="text-muted d-block">Rinse &amp; Purity Standard</small>
+                  <strong class="d-block" style="color:var(--sp-ink)">000 PPM Deionised Pure Water</strong>
+                  <span class="badge bg-primary-subtle text-primary mt-1">Zero Chemical Residue</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ==================== 2. TAB: CREW DISPATCH ==================== -->
+        <div class="tab-pane fade" id="tabViewCrew" role="tabpanel">
+          <h1 class="ref-dash-title">Field Crew Dispatch &amp; Arrival Tracking</h1>
+          <p class="ref-dash-sub">Real-time mobile technician GPS, arrival window updates, and crew certifications.</p>
+
+          <div class="row g-3 g-xl-4">
+            <div class="col-lg-7">
+              <div class="ref-panel">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h2 class="h5 mb-0" style="color:var(--sp-ink)">Active Field Appointment</h2>
+                  <span class="ref-pill-badge">Confirmed Window</span>
+                </div>
+                <div class="d-flex align-items-center gap-3 p-3 rounded-3 bg-light border mb-3">
+                  <img class="rounded-circle" src="assets/images/team/team-03.webp" width="52" height="52" alt="Marcus Vance" onerror="this.src='https://ui-avatars.com/api/?name=Marcus+Vance&background=0284c7&color=fff'">
+                  <div>
+                    <strong class="d-block fs-6" style="color:var(--sp-ink)">Marcus Vance</strong>
+                    <small class="text-primary fw-semibold">Lead Exterior Cleaning &amp; Pure-Water Tech &middot; Mobile Van #3</small>
+                  </div>
+                  <span class="badge bg-success ms-auto py-2 px-3"><i class="bi bi-broadcast me-1"></i> En Route</span>
+                </div>
+                <div class="summary-row"><span>Service Scope</span><strong>Pure-Water Window Detailing, Frames &amp; Sills</strong></div>
+                <div class="summary-row"><span>Date &amp; Time</span><strong>Tomorrow, 10:00 AM &ndash; 12:00 PM</strong></div>
+                <div class="summary-row"><span>Mobile Unit</span><strong>Van #3 &bull; 420L RO/DI Deionised Rig &bull; 50ft Carbon Pole</strong></div>
+                <div class="summary-row"><span>Inspection Level</span><strong>TDS Digital Purity Scan + Streak-Free Quality Audit</strong></div>
+                <div class="summary-total"><span>Current Copay / Balance</span><span>$0.00 (Auto-Pay Settled)</span></div>
+
+                <div class="d-flex flex-wrap gap-2 mt-3">
+                  <button class="btn btn-brand" type="button" data-bs-toggle="modal" data-bs-target="#rescheduleModal">Reschedule Arrival</button>
+                  <button class="btn btn-outline-brand" type="button" onclick="alert('Demo: Direct message sent to Technician Marcus Vance on Van #3.');">Message Crew</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <div class="ref-panel">
+                <h2 class="h5 mb-3" style="color:var(--sp-ink)"><i class="bi bi-truck text-primary me-2"></i>Van Dispatch Timeline</h2>
+                <ul class="track-timeline">
+                  <li class="done">
+                    <strong>Dispatch Confirmed</strong>
+                    <small class="text-muted">Yesterday, 14:20 &middot; Job #CC-4821 scheduled</small>
+                  </li>
+                  <li class="done">
+                    <strong>Pure-Water Rig Calibrated</strong>
+                    <small class="text-muted">000 PPM water tank &amp; 50ft ionic pole loaded</small>
+                  </li>
+                  <li class="active">
+                    <strong>En Route to Springfield</strong>
+                    <small class="text-muted">Estimated arrival tomorrow at 10:00 AM</small>
+                  </li>
+                  <li>
+                    <strong>On-Site Detailing &amp; Inspection</strong>
+                    <small class="text-muted">Digital photo inspection report published</small>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== 3. TAB: SERVICE PIPELINE ==================== -->
+        <div class="tab-pane fade" id="tabViewPipeline" role="tabpanel">
+          <h1 class="ref-dash-title">Service Pipeline &amp; Detailing Stages</h1>
+          <p class="ref-dash-sub">Progress milestones tracked under streak-free pure water standards.</p>
+
+          <div class="ref-panel">
+            <div class="row g-3">
+              <div class="col-md-3">
+                <div class="p-3 rounded-3 bg-light border h-100">
+                  <span class="badge bg-success mb-2">Stage 1: Complete</span>
+                  <h3 class="h6 mb-1" style="color:var(--sp-ink)">Pre-Wash &amp; Sills Detailing</h3>
+                  <small class="text-muted d-block mb-2">Frames and tracks brushed free of cobwebs, pollen and debris.</small>
+                  <strong class="text-success small"><i class="bi bi-check-circle-fill"></i> 100% Passed</strong>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="p-3 rounded-3 bg-light border h-100">
+                  <span class="badge bg-success mb-2">Stage 2: Complete</span>
+                  <h3 class="h6 mb-1" style="color:var(--sp-ink)">RO/DI Water Setup</h3>
+                  <small class="text-muted d-block mb-2">4-stage filtration deployed delivering 000 PPM pure deionized water.</small>
+                  <strong class="text-success small"><i class="bi bi-check-circle-fill"></i> Rig Online</strong>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="p-3 rounded-3 bg-light border h-100">
+                  <span class="badge bg-primary mb-2">Stage 3: In Progress</span>
+                  <h3 class="h6 mb-1" style="color:var(--sp-ink)">High-Reach Pure-Water Wash</h3>
+                  <small class="text-muted d-block mb-2">Ultralight carbon poles cleaning 2nd and 3rd story exterior glass.</small>
+                  <strong class="text-primary small"><i class="bi bi-arrow-repeat"></i> 78% Complete</strong>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="p-3 rounded-3 bg-light border h-100">
+                  <span class="badge bg-secondary mb-2">Stage 4: Pending</span>
+                  <h3 class="h6 mb-1" style="color:var(--sp-ink)">Clearance &amp; Sign-off</h3>
+                  <small class="text-muted d-block mb-2">Streak-free inspection &amp; 48-hour rain guarantee certificate release.</small>
+                  <strong class="text-muted small"><i class="bi bi-clock"></i> Tomorrow</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== 4. TAB: WATER PURITY TELEMETRY ==================== -->
+        <div class="tab-pane fade" id="tabViewTelemetry" role="tabpanel">
+          <h1 class="ref-dash-title">Water Purity &amp; TDS Telemetry</h1>
+          <p class="ref-dash-sub">Daily psychometric readings, filtration chamber specs, and laboratory purity logs.</p>
+
+          <div class="row g-3 g-xl-4">
+            <div class="col-lg-6">
+              <div class="ref-panel h-100">
+                <h2 class="h5 mb-3" style="color:var(--sp-ink)"><i class="bi bi-speedometer2 text-primary me-2"></i>Chamber Psychrometric Telemetry</h2>
+                <div class="table-responsive">
+                  <table class="table align-middle">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Zone</th>
+                        <th>Dry Bulb (&deg;F)</th>
+                        <th>Relative Humidity</th>
+                        <th>Grains/Lb (GPP)</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>Living Area Glass</strong></td>
+                        <td>74.2&deg;F</td>
+                        <td>38% RH</td>
+                        <td>44 GPP</td>
+                        <td><span class="badge bg-success">Optimal</span></td>
+                      </tr>
+                      <tr>
+                        <td><strong>Subfloor &amp; Sill</strong></td>
+                        <td>72.8&deg;F</td>
+                        <td>42% RH</td>
+                        <td>48 GPP</td>
+                        <td><span class="badge bg-success">Optimal</span></td>
+                      </tr>
+                      <tr>
+                        <td><strong>External Ambient</strong></td>
+                        <td>68.0&deg;F</td>
+                        <td>62% RH</td>
+                        <td>64 GPP</td>
+                        <td><span class="badge bg-secondary">Baseline</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="ref-panel h-100">
+                <h2 class="h5 mb-3" style="color:var(--sp-ink)"><i class="bi bi-droplet-half text-primary me-2"></i>Pure Water Filtration Telemetry</h2>
+                <div class="p-3 rounded-3 bg-light border mb-3">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="small fw-bold">Pre-Filter (Municipal Tap)</span>
+                    <span class="badge bg-secondary">280 PPM</span>
+                  </div>
+                  <div class="progress mb-3" style="height:6px"><div class="progress-bar bg-info" style="width:100%"></div></div>
+
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="small fw-bold">Reverse Osmosis Rejection</span>
+                    <span class="badge bg-info">012 PPM (96% Pass)</span>
+                  </div>
+                  <div class="progress mb-3" style="height:6px"><div class="progress-bar bg-primary" style="width:40%"></div></div>
+
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="small fw-bold text-primary">Virgin DI Resin Polish</span>
+                    <span class="badge bg-success fw-bold">000 PPM Ultra-Pure</span>
+                  </div>
+                  <div class="progress" style="height:8px"><div class="progress-bar bg-success" style="width:100%"></div></div>
+                </div>
+                <div class="d-flex justify-content-between small text-muted">
+                  <span>Tank Level: <strong>420L Full</strong></span>
+                  <span class="text-success fw-bold"><i class="bi bi-check-circle-fill"></i> 100% Streak-Free Guarantee</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== 5. TAB: WARRANTY & INSURANCE ==================== -->
+        <div class="tab-pane fade" id="tabViewGuarantee" role="tabpanel">
+          <h1 class="ref-dash-title">Service Warranty &amp; Coverage Dossier</h1>
+          <p class="ref-dash-sub">Direct billing statements, ANSI standards compliance, and zero-liability documents.</p>
+
+          <div class="ref-panel">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h2 class="h5 mb-0" style="color:var(--sp-ink)">Service Policy #CC-89104</h2>
+              <span class="badge bg-success fs-6 py-2 px-3"><i class="bi bi-shield-check me-1"></i> Coverage Active &amp; Verified</span>
+            </div>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <ul class="activity-list">
+                  <li>
+                    <i class="bi bi-file-earmark-check text-success"></i>
+                    <div>
+                      <strong style="color:var(--sp-ink)">Service Agreement #CC-4821 Accepted</strong>
+                      <small>Quarterly Residential Pure-Water Exterior Care Plan</small>
+                    </div>
+                  </li>
+                  <li>
+                    <i class="bi bi-currency-dollar text-primary"></i>
+                    <div>
+                      <strong style="color:var(--sp-ink)">Settled Auto-Pay Billing</strong>
+                      <small>$0.00 outstanding balance &bull; 100% transparent pricing</small>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="activity-list">
+                  <li>
+                    <i class="bi bi-award text-info"></i>
+                    <div>
+                      <strong style="color:var(--sp-ink)">$5,000,000 Comprehensive Liability</strong>
+                      <small>Active policy coverage on exterior architectural facades &amp; glass</small>
+                    </div>
+                  </li>
+                  <li>
+                    <i class="bi bi-umbrella text-success"></i>
+                    <div>
+                      <strong style="color:var(--sp-ink)">48-Hour Streak-Free Rain Protection</strong>
+                      <small>Complimentary pure-water touchup in case of weather events</small>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== 6. TAB: PRIORITY SERVICE ==================== -->
+        <div class="tab-pane fade" id="tabViewEmergency" role="tabpanel">
+          <h1 class="ref-dash-title">24/7 Priority Service &amp; Re-clean Request</h1>
+          <p class="ref-dash-sub">Instant priority service request sent directly to field operations supervisor.</p>
+
+          <div class="ref-panel" style="max-width:700px">
+            <form onsubmit="event.preventDefault(); document.getElementById('emergAlert').hidden=false; this.reset();">
+              <div class="mb-3">
+                <label class="form-label fw-bold" for="emrgType" style="color:var(--sp-ink)">Priority Request Level</label>
+                <select class="form-select" id="emrgType" required>
+                  <option selected>Level 1 &mdash; 48-Hour Weather Rain Re-Rinse Touch-up (Complimentary)</option>
+                  <option>Level 2 &mdash; Pre-Event Spotless Exterior Rush</option>
+                  <option>Level 3 &mdash; Hard-Water Mineral Stain Deep Removal</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label fw-bold" for="emrgNotes" style="color:var(--sp-ink)">Notes / Panes to Inspect</label>
+                <textarea class="form-control" id="emrgNotes" rows="3" placeholder="Describe the service request..." required>Second floor master balcony glass needs rain re-rinse inspection.</textarea>
+              </div>
+              <button class="btn btn-brand w-100 py-2 fw-bold" type="submit">Submit Priority Service Alert</button>
+              <div class="alert alert-success mt-3 mb-0" id="emergAlert" hidden>
+                <strong>Dispatch Sent!</strong> Field supervisor notified on Van #3. Direct response within 15 minutes.
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- ==================== 7. TAB: INVOICES & PAYMENTS ==================== -->
+        <div class="tab-pane fade" id="tabViewCarrier" role="tabpanel">
+          <h1 class="ref-dash-title">Invoices &amp; Payment Receipts</h1>
+          <p class="ref-dash-sub">Itemized billing statements, payment receipts, and automated card billing records.</p>
+
+          <div class="ref-panel">
+            <div class="table-responsive">
+              <table class="table align-middle">
+                <thead class="table-light">
+                  <tr>
+                    <th>Invoice #</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th class="text-end">Receipt</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>INV-4821</strong></td>
+                    <td>Pure-Water Exterior Detailing (28 Panes + Frames)</td>
+                    <td>14 Oct 2026</td>
+                    <td><strong>$180.00</strong></td>
+                    <td><span class="badge bg-success">Paid via Auto-Pay</span></td>
+                    <td class="text-end"><button class="btn btn-sm btn-outline-brand" data-bs-toggle="modal" data-bs-target="#invoiceModal">View</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>INV-4712</strong></td>
+                    <td>Gutter Clearance &amp; Downspout Pure Rinse</td>
+                    <td>15 Aug 2026</td>
+                    <td><strong>$140.00</strong></td>
+                    <td><span class="badge bg-success">Paid</span></td>
+                    <td class="text-end"><button class="btn btn-sm btn-outline-brand" data-bs-toggle="modal" data-bs-target="#invoiceModal">View</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>INV-4608</strong></td>
+                    <td>Interior &amp; Exterior Spring Deep Clean</td>
+                    <td>10 May 2026</td>
+                    <td><strong>$240.00</strong></td>
+                    <td><span class="badge bg-success">Paid</span></td>
+                    <td class="text-end"><button class="btn btn-sm btn-outline-brand" data-bs-toggle="modal" data-bs-target="#invoiceModal">View</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== 8. TAB: SERVICE ESTIMATES ==================== -->
+        <div class="tab-pane fade" id="tabViewEstimates" role="tabpanel">
+          <h1 class="ref-dash-title">Service Estimates &amp; Quotes</h1>
+          <p class="ref-dash-sub">Standardized itemized estimates and upcoming service proposals.</p>
+
+          <div class="ref-panel">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h2 class="h5 mb-0" style="color:var(--sp-ink)">Itemized Service Estimate #EST-4821</h2>
+              <button class="btn btn-sm btn-brand" onclick="alert('Demo: Downloading itemized estimate PDF.');">Download PDF</button>
+            </div>
+            <div class="p-3 rounded-3 bg-light border">
+              <div class="d-flex justify-content-between mb-2"><span>Full Exterior Pure-Water Detailing (Ground &amp; High Reach)</span><strong>$140.00</strong></div>
+              <div class="d-flex justify-content-between mb-2"><span>Sill Vacuuming &amp; Screen Deep Wash</span><strong>$40.00</strong></div>
+              <div class="d-flex justify-content-between mb-2"><span>Solar Panel Pure-Water De-soiling Add-on</span><strong>$65.00</strong></div>
+              <hr>
+              <div class="d-flex justify-content-between fw-bold fs-5 text-primary"><span>Total Estimated Investment</span><span>$245.00</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== 9. TAB: MY PROFILE ==================== -->
+        <div class="tab-pane fade" id="tabViewProfile" role="tabpanel">
+          <h1 class="ref-dash-title">Property Profile &amp; Service Details</h1>
+          <p class="ref-dash-sub">Manage your service address, gate codes, and notification preferences.</p>
+
+          <div class="ref-panel" style="max-width:700px">
+            <form class="needs-validation" onsubmit="event.preventDefault(); document.getElementById('profSavedAlert').hidden=false;">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label fw-bold" for="pfName" style="color:var(--sp-ink)">Account Name</label>
+                  <input class="form-control" id="pfName" value="Jordan Blake" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label fw-bold" for="pfEmail" style="color:var(--sp-ink)">Email</label>
+                  <input type="email" class="form-control" id="pfEmail" value="jordan.blake@example.com" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label fw-bold" for="pfAddr" style="color:var(--sp-ink)">Service Address</label>
+                  <input class="form-control" id="pfAddr" value="42 Willow Lane, Springfield" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label fw-bold" for="pfNotes" style="color:var(--sp-ink)">Gate &amp; Access Instructions</label>
+                  <textarea class="form-control" id="pfNotes" rows="2">Side gate code 4492. Dogs secured inside house.</textarea>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-brand" type="submit">Save Profile Changes</button>
+                </div>
+                <div class="col-12">
+                  <div class="alert alert-success mt-2 mb-0" id="profSavedAlert" hidden>Profile updated.</div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+</div>
+
+<!-- ======================== MODALS ======================== -->
+<!-- Reschedule Modal -->
+<div class="modal fade" id="rescheduleModal" tabindex="-1" aria-labelledby="rescheduleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <form class="modal-content needs-validation" id="rescheduleForm" novalidate onsubmit="event.preventDefault(); alert('Appointment rescheduled to your requested window.'); bootstrap.Modal.getInstance(document.getElementById('rescheduleModal')).hide();">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="rescheduleModalLabel">Reschedule Field Crew Arrival</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="small text-muted">Job <strong id="rescheduleBookingId">#CC-4821</strong> &middot; Technician: Marcus Vance (Van #3)</p>
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <label class="form-label fw-bold" for="rescheduleDate" style="color:var(--sp-ink)">New Date</label>
+            <input class="form-control" id="rescheduleDate" type="date" value="2026-10-31" required>
+          </div>
+          <div class="col-sm-6">
+            <label class="form-label fw-bold" for="rescheduleTime" style="color:var(--sp-ink)">Arrival Window</label>
+            <select class="form-select" id="rescheduleTime" required>
+              <option>08:00 – 10:00</option>
+              <option selected>10:00 – 12:00</option>
+              <option>12:00 – 14:00</option>
+              <option>14:00 – 16:00</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-brand" type="button" data-bs-dismiss="modal">Keep Current Slot</button>
+        <button class="btn btn-brand" type="submit">Confirm Reschedule</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Invoice Modal -->
+<div class="modal fade" id="invoiceModal" tabindex="-1" aria-labelledby="invoiceModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="invoiceModalLabel">Itemized Statement #INV-4821</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="invoiceModalContent">
+        <div class="p-3 bg-light rounded-3 mb-3 border">
+          <div class="d-flex justify-content-between mb-2">
+            <strong class="text-primary">CrystalClean Window Cleaning Co.</strong>
+            <span class="badge bg-success">PAID VIA AUTO-PAY</span>
+          </div>
+          <p class="small text-muted mb-0">118 Harbour Street, Riverside, CA &bull; Tax ID: US-94821038</p>
+        </div>
+        <div class="summary-row"><span>Service Job ID</span><strong>#CC-4821</strong></div>
+        <div class="summary-row"><span>Payment Method</span><strong>Visa ending in 4242</strong></div>
+        <div class="summary-row"><span>Service Date</span><strong>14 October 2026</strong></div>
+        <div class="summary-row"><span>Remaining Balance</span><strong>$0.00</strong></div>
+        <div class="summary-total"><span>Total Settled</span><span>$180.00</span></div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-brand" type="button" data-bs-dismiss="modal">Close</button>
+        <button class="btn btn-brand" type="button" onclick="alert('Demo: PDF receipt downloaded.');">Download PDF</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile Offcanvas Sidebar -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarOffcanvas" aria-labelledby="sidebarOffcanvasLabel">
+  <div class="offcanvas-header">
+    <a class="brand-box p-0 mb-0" href="#tabViewDashboard" data-bs-target="#tabViewDashboard" id="sidebarOffcanvasLabel" aria-label="CrystalClean Home">
+      <div class="brand-icon-sq" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+        </svg>
+      </div>
+      <div>
+        <span class="brand-title">CrystalClean</span>
+        <span class="brand-sub">Window &amp; Exterior Care</span>
+      </div>
+    </a>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body p-0">
+    <div class="p-3">
+      <div class="dossier-card mb-3">
+        <div class="dossier-label"><i class="bi bi-card-checklist"></i> Active Service Job</div>
+        <select class="dossier-select" id="mobileServiceJobSelect" aria-label="Select Active Service Job">
+          <option value="CC-4821" selected>Job #CC-4821 (Oakridge Estate)</option>
+          <option value="CC-4822">Job #CC-4822 (Riverside Commercial)</option>
+          <option value="CC-4830">Job #CC-4830 (Sunset Bay Plaza)</option>
+        </select>
+      </div>
+      <ul class="ref-nav">
+        <li><button class="ref-nav-btn active" data-bs-toggle="tab" data-bs-target="#tabViewDashboard" data-bs-dismiss="offcanvas"><i class="bi bi-grid-fill"></i> Dashboard</button></li>
+        <li><button class="ref-nav-btn" data-bs-toggle="tab" data-bs-target="#tabViewCrew" data-bs-dismiss="offcanvas"><i class="bi bi-calendar2-check"></i> Crew Dispatch <span class="ref-badge ref-badge-blue">1 Next</span></button></li>
+        <li><button class="ref-nav-btn" data-bs-toggle="tab" data-bs-target="#tabViewPipeline" data-bs-dismiss="offcanvas"><i class="bi bi-kanban"></i> Service Pipeline</button></li>
+        <li><button class="ref-nav-btn" data-bs-toggle="tab" data-bs-target="#tabViewTelemetry" data-bs-dismiss="offcanvas"><i class="bi bi-droplet-half"></i> Water Purity Telemetry <span class="ref-badge ref-badge-green">0 PPM</span></button></li>
+        <li><button class="ref-nav-btn" data-bs-toggle="tab" data-bs-target="#tabViewGuarantee" data-bs-dismiss="offcanvas"><i class="bi bi-shield-check"></i> Warranty &amp; Insurance</button></li>
+        <li><button class="ref-nav-btn" data-bs-toggle="tab" data-bs-target="#tabViewEmergency" data-bs-dismiss="offcanvas"><i class="bi bi-telephone-plus"></i> Priority Service <span class="ref-badge ref-badge-red">24/7</span></button></li>
+        <li><button class="ref-nav-btn" data-bs-toggle="tab" data-bs-target="#tabViewCarrier" data-bs-dismiss="offcanvas"><i class="bi bi-credit-card-2-front"></i> Invoices &amp; Payments</button></li>
+        <li><button class="ref-nav-btn" data-bs-toggle="tab" data-bs-target="#tabViewEstimates" data-bs-dismiss="offcanvas"><i class="bi bi-file-earmark-ruled"></i> Service Estimates</button></li>
+        <li><button class="ref-nav-btn" data-bs-toggle="tab" data-bs-target="#tabViewProfile" data-bs-dismiss="offcanvas"><i class="bi bi-person"></i> My Profile</button></li>
+        <li><button class="ref-nav-btn ref-nav-signout" type="button" data-auth-logout data-bs-dismiss="offcanvas" aria-label="Sign out"><i class="bi bi-box-arrow-right"></i> Sign Out</button></li>
+      </ul>
+      <!-- Mobile Profile Footer -->
+      <div class="mt-4 pt-3 border-top d-flex align-items-center gap-2">
+        <div class="d-flex align-items-center gap-2 text-truncate">
+          <img src="assets/images/avatars/customer-01.webp" class="rounded-circle flex-shrink-0" width="36" height="36" alt="Jordan Blake" onerror="this.src='https://ui-avatars.com/api/?name=Jordan+Blake&background=0284c7&color=fff'">
+          <div class="small text-truncate">
+            <strong class="d-block text-truncate" style="color:var(--sp-ink)">Jordan Blake</strong>
+            <span class="text-muted d-block text-truncate" style="font-size:0.75rem">Account #CC-89104</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<button class="back-to-top" id="backToTop" type="button" aria-label="Back to top"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="assets/js/darkmode.js" defer></script>
+<script src="assets/js/rtl.js" defer></script>
+<script src="assets/js/auth.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // 1. Tab switching and in-place exact content matching engine
+    const TAB_TARGETS = [
+      '#tabViewDashboard',
+      '#tabViewCrew',
+      '#tabViewPipeline',
+      '#tabViewTelemetry',
+      '#tabViewGuarantee',
+      '#tabViewEmergency',
+      '#tabViewCarrier',
+      '#tabViewEstimates',
+      '#tabViewProfile'
+    ];
+
+    const ALIAS_MAP = {
+      '#tabOverview': '#tabViewDashboard',
+      '#tabBookings': '#tabViewCrew',
+      '#tabInvoices': '#tabViewCarrier',
+      '#tabMessages': '#tabViewEmergency',
+      '#tabProfile': '#tabViewProfile',
+      '#tabInventory': '#tabViewTelemetry',
+      '#tabInspection': '#tabViewPipeline'
+    };
+
+    function switchTab(rawTargetId) {
+      if (!rawTargetId) return;
+      const targetId = ALIAS_MAP[rawTargetId] || rawTargetId;
+      const targetPane = document.querySelector(targetId);
+      if (!targetPane) return;
+
+      // Highlight all matching nav buttons (desktop + offcanvas mobile) and deactivate others
+      document.querySelectorAll('.ref-nav-btn').forEach(b => {
+        if (b.hasAttribute('data-auth-logout') || b.classList.contains('ref-nav-signout')) return;
+        const btnTarget = b.getAttribute('data-bs-target');
+        const isMatch = btnTarget === targetId;
+        b.classList.toggle('active', isMatch);
+        b.setAttribute('aria-selected', isMatch ? 'true' : 'false');
+      });
+
+      // Hide all tab panes
+      document.querySelectorAll('.tab-content > .tab-pane').forEach(p => {
+        p.classList.remove('show', 'active');
+      });
+
+      // Show matching tab pane
+      targetPane.classList.add('show', 'active');
+
+      // Keep Bootstrap Tab instance in sync if present
+      const triggerBtn = document.querySelector(`.ref-nav-btn[data-bs-target="${targetId}"]`);
+      if (triggerBtn && window.bootstrap && typeof bootstrap.Tab !== 'undefined') {
+        try {
+          bootstrap.Tab.getOrCreateInstance(triggerBtn).show();
+        } catch (err) {}
+      }
+
+      // Update session storage and URL hash without page reload or jump
+      try {
+        sessionStorage.setItem('sp_dashboard_tab', targetId);
+      } catch (e) {}
+      if (window.location.hash !== targetId) {
+        history.replaceState(null, '', targetId);
+      }
+
+      // Scroll main content area smoothly to top
+      const mainContent = document.getElementById('mainContent');
+      if (mainContent) {
+        mainContent.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+    window.switchDashboardTab = switchTab;
+
+    // Attach click listeners to all tab buttons to display matching content in-place with zero page redirect
+    document.querySelectorAll('.ref-nav-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        if (this.hasAttribute('data-auth-logout') || this.classList.contains('ref-nav-signout')) {
+          return;
+        }
+        e.preventDefault();
+        e.stopPropagation();
+        const target = this.getAttribute('data-bs-target');
+        if (target) {
+          switchTab(target);
+        }
+        const offcanvasEl = this.closest('.offcanvas');
+        if (offcanvasEl && window.bootstrap) {
+          try {
+            const inst = bootstrap.Offcanvas.getInstance(offcanvasEl);
+            if (inst) inst.hide();
+          } catch (err) {}
+        }
+      });
+    });
+
+    // Brand logo stays on dashboard and switches to #tabViewDashboard
+    document.querySelectorAll('.brand-box').forEach(brand => {
+      brand.addEventListener('click', function(e) {
+        e.preventDefault();
+        switchTab('#tabViewDashboard');
+      });
+    });
+
+    // Active Service Job synchronization (Sidebar select, mobile offcanvas select & topbar pill)
+    const jobData = {
+      'CC-4821': { name: 'Job #CC-4821 (Oakridge Estate)', short: '#CC-4821' },
+      'CC-4822': { name: 'Job #CC-4822 (Riverside Commercial)', short: '#CC-4822' },
+      'CC-4830': { name: 'Job #CC-4830 (Sunset Bay Plaza)', short: '#CC-4830' }
+    };
+
+    function setActiveJob(jobId) {
+      const job = jobData[jobId];
+      if (!job) return;
+
+      const sidebarSelect = document.getElementById('serviceJobSelect');
+      if (sidebarSelect) sidebarSelect.value = jobId;
+
+      const mobileSelect = document.getElementById('mobileServiceJobSelect');
+      if (mobileSelect) mobileSelect.value = jobId;
+
+      const topbarPill = document.getElementById('topbarJobPillText');
+      if (topbarPill) topbarPill.textContent = job.short;
+
+      document.querySelectorAll('#topbarJobDropdown .dropdown-item').forEach(item => {
+        const isMatch = item.getAttribute('data-job-id') === jobId;
+        item.classList.toggle('active', isMatch);
+      });
+    }
+
+    const sSelect = document.getElementById('serviceJobSelect');
+    if (sSelect) sSelect.addEventListener('change', function() { setActiveJob(this.value); });
+    const mSelect = document.getElementById('mobileServiceJobSelect');
+    if (mSelect) mSelect.addEventListener('change', function() { setActiveJob(this.value); });
+    document.querySelectorAll('#topbarJobDropdown .dropdown-item').forEach(item => {
+      item.addEventListener('click', function(e) {
+        e.preventDefault();
+        const jobId = this.getAttribute('data-job-id');
+        if (jobId) setActiveJob(jobId);
+      });
+    });
+
+    // Initial Tab resolution from URL hash or sessionStorage
+    const initialHash = window.location.hash;
+    const storedTab = sessionStorage.getItem('sp_dashboard_tab');
+    if (initialHash && (TAB_TARGETS.includes(initialHash) || ALIAS_MAP[initialHash])) {
+      switchTab(initialHash);
+    } else if (storedTab && (TAB_TARGETS.includes(storedTab) || ALIAS_MAP[storedTab])) {
+      switchTab(storedTab);
+    } else {
+      switchTab('#tabViewDashboard');
+    }
+
+    // Listen to hash changes without reloading
+    window.addEventListener('hashchange', function() {
+      const h = window.location.hash;
+      if (h && (TAB_TARGETS.includes(h) || ALIAS_MAP[h])) {
+        switchTab(h);
+      }
+    });
+
+    // 2. Exact Reference Match: Psychometric Moisture Reduction Curve (Area Chart)
+    const curveChartEl = document.querySelector("#psychometricReductionChart");
+    if (curveChartEl && typeof ApexCharts !== 'undefined') {
+      const isDark = document.documentElement.getAttribute('data-bs-theme') === 'dark';
+      const curveOptions = {
+        series: [{
+          name: 'Wood Moisture Equivalent (WME %)',
+          data: [10, 12, 15, 18, 22, 26, 30, 35]
+        }],
+        chart: {
+          type: 'area',
+          height: 290,
+          toolbar: { show: false },
+          zoom: { enabled: false },
+          background: 'transparent'
+        },
+        colors: ['#0284c7'],
+        stroke: {
+          curve: 'smooth',
+          width: 3
+        },
+        fill: {
+          type: 'gradient',
+          gradient: {
+            shadeIntensity: 1,
+            opacityFrom: 0.45,
+            opacityTo: 0.05,
+            stops: [0, 95, 100]
+          }
+        },
+        markers: {
+          size: 5,
+          colors: ['#ffffff'],
+          strokeColors: '#0284c7',
+          strokeWidth: 3,
+          hover: { size: 7 }
+        },
+        grid: {
+          borderColor: isDark ? 'rgba(255,255,255,0.08)' : '#f1f5f9',
+          strokeDashArray: 4
+        },
+        xaxis: {
+          categories: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7', 'Day 8'],
+          labels: {
+            style: {
+              colors: isDark ? '#94a3b8' : '#64748b',
+              fontSize: '12px',
+              fontFamily: 'Plus Jakarta Sans'
+            }
+          },
+          axisBorder: { show: false },
+          axisTicks: { show: false }
+        },
+        yaxis: {
+          min: 10,
+          max: 35,
+          tickAmount: 5,
+          labels: {
+            formatter: (val) => val + '%',
+            style: {
+              colors: isDark ? '#94a3b8' : '#64748b',
+              fontSize: '12px',
+              fontFamily: 'Plus Jakarta Sans'
+            }
+          }
+        },
+        tooltip: {
+          theme: isDark ? 'dark' : 'light',
+          y: {
+            formatter: (val) => val + '% WME (Target: <12%)'
+          }
+        }
+      };
+
+      const curveChart = new ApexCharts(curveChartEl, curveOptions);
+      curveChart.render();
+    }
+
+    // 3. Exact Reference Match: Restoration Milestones 78% Donut RadialBar Chart
+    const radialChartEl = document.querySelector("#restorationMilestoneChart");
+    if (radialChartEl && typeof ApexCharts !== 'undefined') {
+      const isDark = document.documentElement.getAttribute('data-bs-theme') === 'dark';
+      const radialOptions = {
+        series: [78],
+        chart: {
+          height: 240,
+          type: 'radialBar',
+          background: 'transparent'
+        },
+        plotOptions: {
+          radialBar: {
+            hollow: {
+              size: '64%'
+            },
+            track: {
+              background: isDark ? 'rgba(255,255,255,0.06)' : '#f1f5f9',
+              strokeWidth: '100%'
+            },
+            dataLabels: {
+              name: {
+                show: true,
+                fontSize: '11px',
+                fontWeight: 700,
+                color: isDark ? '#94a3b8' : '#64748b',
+                offsetY: 22,
+                textTransform: 'uppercase'
+              },
+              value: {
+                offsetY: -16,
+                fontSize: '32px',
+                fontWeight: 800,
+                fontFamily: 'Plus Jakarta Sans',
+                color: isDark ? '#f1f5f9' : '#0f172a',
+                formatter: function (val) {
+                  return val + "%";
+                }
+              }
+            }
+          }
+        },
+        fill: {
+          type: 'gradient',
+          gradient: {
+            shade: 'dark',
+            type: 'horizontal',
+            shadeIntensity: 0.5,
+            gradientToColors: ['#0ea5e9'],
+            inverseColors: true,
+            opacityFrom: 1,
+            opacityTo: 1,
+            stops: [0, 100]
+          }
+        },
+        stroke: {
+          lineCap: 'round'
+        },
+        labels: ['COMPLETE'],
+        colors: ['#0284c7']
+      };
+
+      const radialChart = new ApexCharts(radialChartEl, radialOptions);
+      radialChart.render();
+    }
+
+    // 3. Robust Sign Out Action
+    const performSignOut = function(e) {
+      if (e) e.preventDefault();
+      if (window.SP_AUTH && typeof window.SP_AUTH.logout === 'function') {
+        window.SP_AUTH.logout();
+      } else {
+        try {
+          localStorage.removeItem('sp_session');
+          localStorage.removeItem('sp_current_user');
+          sessionStorage.clear();
+        } catch (err) {}
+        window.location.href = 'login.html';
+      }
+    };
+
+    document.querySelectorAll('[data-auth-logout]').forEach(function(btn) {
+      btn.addEventListener('click', performSignOut);
+    });
+  });
+</script>
+</body>
+</html>

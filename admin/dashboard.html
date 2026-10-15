@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard | CrystalClean Admin</title>
+  <meta name="description" content="CrystalClean window operations overview with revenue, bookings, customers and activity.">
+  <link rel="canonical" href="dashboard.html">
+  <meta name="theme-color" content="#0ea5e9">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CrystalClean Window Services">
+  <meta property="og:title" content="Admin Dashboard | CrystalClean">
+  <meta property="og:description" content="CrystalClean window operations overview with revenue, bookings, customers and activity.">
+  <meta property="og:image" content="../assets/images/hero/hero-cleaning.webp">
+  <meta property="og:url" content="../admin/dashboard.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Admin Dashboard | CrystalClean">
+  <meta name="twitter:description" content="CrystalClean window operations overview with revenue, bookings, customers and activity.">
+  <meta name="twitter:image" content="../assets/images/hero/hero-cleaning.webp">
+  <link rel="icon" href="../assets/images/logo/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/choices.js@10/public/assets/styles/choices.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+
+<body>
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-bubble"></div><span class="visually-hidden">Loading</span>
+  </div>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="dash-shell">
+
+    <aside class="dash-sidebar" id="adminSidebar" aria-label="Admin navigation">
+      <a class="navbar-brand" href="../index.html" aria-label="CrystalClean Home">
+        <div class="brand-icon-sq" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+          </svg>
+        </div>
+        <div class="brand-text-wrap">
+          <span class="brand-title">CrystalClean</span>
+          <span class="brand-sub">Window &amp; Exterior Care</span>
+        </div>
+      </a>
+      <p class="dash-nav-label">Overview</p>
+      <ul class="dash-nav">
+        <li><a href="dashboard.html" class="active" data-nav="dashboard.html"><i class="bi bi-speedometer2"
+              aria-hidden="true"></i> Dashboard</a></li>
+        <li><a href="analytics.html" data-nav="analytics.html"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i>
+            Analytics</a></li>
+      </ul>
+      <p class="dash-nav-label">Operations</p>
+      <ul class="dash-nav">
+        <li><a href="bookings.html" data-nav="bookings.html"><i class="bi bi-calendar-check" aria-hidden="true"></i>
+            Bookings</a></li>
+        <li><a href="cleaners.html" data-nav="cleaners.html"><i class="bi bi-people" aria-hidden="true"></i>
+            Cleaners</a></li>
+        <li><a href="users.html" data-nav="users.html"><i class="bi bi-person-badge" aria-hidden="true"></i>
+            Customers</a></li>
+      </ul>
+      <p class="dash-nav-label">Engagement</p>
+      <ul class="dash-nav">
+        <li><a href="messages.html" data-nav="messages.html"><i class="bi bi-chat-dots" aria-hidden="true"></i>
+            Messages</a></li>
+        <li><a href="reviews.html" data-nav="reviews.html"><i class="bi bi-star" aria-hidden="true"></i> Reviews</a>
+        </li>
+      </ul>
+      <p class="dash-nav-label">Finance</p>
+      <ul class="dash-nav">
+        <li><a href="payments.html" data-nav="payments.html"><i class="bi bi-credit-card" aria-hidden="true"></i>
+            Payments</a></li>
+      </ul>
+      <p class="dash-nav-label">System</p>
+      <ul class="dash-nav">
+        <li><a href="settings.html" data-nav="settings.html"><i class="bi bi-gear" aria-hidden="true"></i> Settings</a>
+        </li>
+      </ul>
+      <p class="dash-nav-label">Account</p>
+      <ul class="dash-nav">
+        <li><a href="../customer-dashboard.html"><i class="bi bi-person-circle" aria-hidden="true"></i> Customer
+            view</a></li>
+        <li><a href="../index.html"><i class="bi bi-globe2" aria-hidden="true"></i> Visit website</a></li>
+        <li><a href="../index.html"><i class="bi bi-box-arrow-right" aria-hidden="true"></i> Sign out</a></li>
+      </ul>
+    </aside>
+    <div class="dash-main">
+      <header class="dash-topbar">
+        <button class="icon-btn d-lg-none" type="button" data-sidebar-toggle aria-expanded="false"
+          aria-controls="adminSidebar" aria-label="Toggle navigation"><i class="bi bi-list"
+            aria-hidden="true"></i></button>
+        <div class="me-auto">
+          <h1 class="h5 mb-0">Dashboard overview</h1>
+          <p class="mb-0" style="font-size:.84rem;color:var(--sp-muted)">Thursday, 6 August 2026</p>
+        </div>
+        <div class="d-none d-md-block" style="min-width:240px">
+          <label class="visually-hidden" for="dashSearch">Search</label>
+          <input class="form-control" type="search" id="dashSearch" placeholder="Search bookings, clients"
+            data-search-target="tbody tr">
+        </div>
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle dark mode"><i
+            class="bi bi-moon-stars" aria-hidden="true"></i></button>
+        <button class="icon-btn" type="button" data-dir-toggle aria-label="Switch text direction"><span
+            aria-hidden="true">RTL</span></button>
+        <button class="icon-btn position-relative" type="button" aria-label="Notifications"><i class="bi bi-bell"
+            aria-hidden="true"></i></button>
+        <div class="dropdown">
+          <button class="btn btn-ghost dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <img class="avatar-sm" src="../assets/images/avatars/team-01.webp" width="36" height="36"
+              alt="Amelia Hart"><span class="d-none d-lg-inline">Amelia H.</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="settings.html">Profile settings</a></li>
+            <li><a class="dropdown-item" href="messages.html">Inbox</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="../index.html">Sign out</a></li>
+          </ul>
+        </div>
+      </header>
+      <main id="main" class="dash-content">
+        <div class="row g-3 g-xl-4 mb-4">
+          <div class="col-sm-6 col-xl-3">
+            <div class="kpi-card">
+              <span class="kpi-icon"><i class="bi bi-cash-coin" aria-hidden="true"></i></span>
+              <div class="kpi-value">$68,420</div>
+              <p class="kpi-label">Revenue this month</p>
+              <p class="kpi-trend up mb-0"><i class="bi bi-arrow-up-right" aria-hidden="true"></i> 12.4% vs last month
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-3">
+            <div class="kpi-card">
+              <span class="kpi-icon"><i class="bi bi-calendar-check" aria-hidden="true"></i></span>
+              <div class="kpi-value">1,284</div>
+              <p class="kpi-label">Bookings completed</p>
+              <p class="kpi-trend up mb-0"><i class="bi bi-arrow-up-right" aria-hidden="true"></i> 8.1% vs last month
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-3">
+            <div class="kpi-card">
+              <span class="kpi-icon"><i class="bi bi-people" aria-hidden="true"></i></span>
+              <div class="kpi-value">947</div>
+              <p class="kpi-label">Active customers</p>
+              <p class="kpi-trend up mb-0"><i class="bi bi-arrow-up-right" aria-hidden="true"></i> 5.6% vs last month
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-3">
+            <div class="kpi-card">
+              <span class="kpi-icon"><i class="bi bi-patch-check text-success" aria-hidden="true"></i></span>
+              <div class="kpi-value">99.8%</div>
+              <p class="kpi-label">Streak-free quality pass</p>
+              <p class="kpi-trend up mb-0"><i class="bi bi-shield-check text-success" aria-hidden="true"></i> 0-TDS water standard</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Operations Quick Actions & Weather Alert -->
+        <div class="dash-panel mb-4 p-3 border rounded-3 bg-body shadow-sm">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+            <div class="d-flex align-items-center gap-3">
+              <div class="p-2 rounded-circle bg-primary-subtle text-primary">
+                <i class="bi bi-wind fs-4"></i>
+              </div>
+              <div>
+                <strong class="d-block" style="color:var(--sp-ink)">High-Reach Wind &amp; Weather Radar &mdash; Riverside Sector</strong>
+                <small class="text-muted">Wind Speed: <strong>6.8 mph (Safe for 50ft carbon poles)</strong> &middot; Rain Risk: <strong>0%</strong> &middot; All 4 mobile pure-water skid units operating at 100% capacity.</small>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap gap-2">
+              <button class="btn btn-sm btn-outline-brand" type="button" onclick="alert('Demo: Logging 0-TDS Virgin DI Resin tank calibration for Van #1 & #3.');">
+                <i class="bi bi-droplet me-1"></i> Log DI Resin Refill
+              </button>
+              <button class="btn btn-sm btn-outline-brand" type="button" onclick="alert('Demo: Daily technician safety & rope rigging audit exported to PDF.');">
+                <i class="bi bi-file-earmark-pdf me-1"></i> Daily Safety Audit
+              </button>
+              <a class="btn btn-sm btn-brand" href="add-booking.html">
+                <i class="bi bi-plus-circle me-1"></i> Dispatch Clean
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fleet Operations & Pure-Water Van Telemetry -->
+        <div class="dash-panel mb-4">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+            <div>
+              <h2 class="h5 mb-0"><i class="bi bi-truck text-primary me-2"></i>Active Pure-Water Fleet Dispatches &amp; Skid Van Telemetry</h2>
+              <small class="text-muted">Real-time GPS status, onboard water tank capacity, and zero-TDS filtration metrics.</small>
+            </div>
+            <span class="badge bg-success py-2 px-3"><i class="bi bi-broadcast me-1"></i> 4 Mobile Vans Live</span>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-md-6 col-xl-3">
+              <div class="p-3 rounded-3 bg-light border h-100">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <span class="badge bg-primary">Van #1 (Skid Rig)</span>
+                  <span class="badge bg-success">Washing</span>
+                </div>
+                <strong class="d-block" style="color:var(--sp-ink)">Marcus Vance</strong>
+                <small class="text-muted d-block mb-2">Commercial Storefronts &middot; Downtown</small>
+                <div class="small border-top pt-2">
+                  <div class="d-flex justify-content-between"><span>Pure Water Tank:</span><strong>380L (76%)</strong></div>
+                  <div class="d-flex justify-content-between"><span>TDS Purity:</span><strong class="text-success">000 PPM</strong></div>
+                  <div class="d-flex justify-content-between"><span>Active Job:</span><span class="text-primary fw-semibold">#BK-4820</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3">
+              <div class="p-3 rounded-3 bg-light border h-100">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <span class="badge bg-primary">Van #2 (High-Reach)</span>
+                  <span class="badge bg-info">En Route</span>
+                </div>
+                <strong class="d-block" style="color:var(--sp-ink)">Hana Sato</strong>
+                <small class="text-muted d-block mb-2">Residential Estates &middot; North Riverside</small>
+                <div class="small border-top pt-2">
+                  <div class="d-flex justify-content-between"><span>Pure Water Tank:</span><strong>420L (84%)</strong></div>
+                  <div class="d-flex justify-content-between"><span>TDS Purity:</span><strong class="text-success">000 PPM</strong></div>
+                  <div class="d-flex justify-content-between"><span>Active Job:</span><span class="text-primary fw-semibold">#BK-4821</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3">
+              <div class="p-3 rounded-3 bg-light border h-100">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <span class="badge bg-primary">Van #3 (Conservatory)</span>
+                  <span class="badge bg-secondary">Job Done</span>
+                </div>
+                <strong class="d-block" style="color:var(--sp-ink)">Liam Chen</strong>
+                <small class="text-muted d-block mb-2">Conservatory &amp; Skylights &middot; Lakeside</small>
+                <div class="small border-top pt-2">
+                  <div class="d-flex justify-content-between"><span>Pure Water Tank:</span><strong>290L (58%)</strong></div>
+                  <div class="d-flex justify-content-between"><span>TDS Purity:</span><strong class="text-success">000 PPM</strong></div>
+                  <div class="d-flex justify-content-between"><span>Next Job:</span><span class="text-muted">Lakeside Solarium</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-xl-3">
+              <div class="p-3 rounded-3 bg-light border h-100">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <span class="badge bg-primary">Van #4 (Rope Rig)</span>
+                  <span class="badge bg-success">Safety Pass</span>
+                </div>
+                <strong class="d-block" style="color:var(--sp-ink)">Elena Rostova</strong>
+                <small class="text-muted d-block mb-2">High-Rise Rope Access &middot; Metro Tower</small>
+                <div class="small border-top pt-2">
+                  <div class="d-flex justify-content-between"><span>Rigging Method:</span><strong>IRATA Dual-Rope</strong></div>
+                  <div class="d-flex justify-content-between"><span>Safety Audit:</span><strong class="text-success">100% Certified</strong></div>
+                  <div class="d-flex justify-content-between"><span>Curtain Wall Panes:</span><span class="text-primary fw-semibold">120 Panes</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-3 g-xl-4 mb-4">
+          <div class="col-lg-8 col-xl-8">
+            <div class="dash-panel h-100">
+              <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
+                <h2>Revenue by month</h2>
+
+              </div>
+              <div id="revenueChart" style="min-height: 300px;"></div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-4">
+            <div class="dash-panel h-100">
+              <h2 class="mb-3">August 2026</h2>
+              <div class="mini-calendar">
+                <div class="dow">M</div>
+                <div class="dow">T</div>
+                <div class="dow">W</div>
+                <div class="dow">T</div>
+                <div class="dow">F</div>
+                <div class="dow">S</div>
+                <div class="dow">S</div>
+                <div class="">1</div>
+                <div class="">2</div>
+                <div class="">3</div>
+                <div class="booked">4</div>
+                <div class="">5</div>
+                <div class="today">6</div>
+                <div class="">7</div>
+                <div class="">8</div>
+                <div class="booked">9</div>
+                <div class="">10</div>
+                <div class="">11</div>
+                <div class="booked">12</div>
+                <div class="">13</div>
+                <div class="booked">14</div>
+                <div class="booked">15</div>
+                <div class="">16</div>
+                <div class="booked">17</div>
+                <div class="">18</div>
+                <div class="">19</div>
+                <div class="booked">20</div>
+                <div class="">21</div>
+                <div class="booked">22</div>
+                <div class="">23</div>
+                <div class="">24</div>
+                <div class="booked">25</div>
+                <div class="">26</div>
+                <div class="booked">27</div>
+                <div class="">28</div>
+                <div class="">29</div>
+                <div class="">30</div>
+                <div class="">31</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Central RO Pure Water Plant & Operations Safety Compliance -->
+        <div class="row g-3 g-xl-4 mb-4">
+          <div class="col-lg-8 col-xl-8">
+            <div class="dash-panel h-100">
+              <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+                <div>
+                  <h2 class="h5 mb-0"><i class="bi bi-moisture text-primary me-2"></i>Central RO &amp; DI Resin Purity Telemetry Hub</h2>
+                  <small class="text-muted">Master zero-TDS filtration station supplying all 4 mobile skid vans.</small>
+                </div>
+                <span class="badge bg-success-subtle text-success border border-success-subtle py-2 px-3">
+                  <i class="bi bi-shield-check me-1"></i> 000 PPM Certified Pure
+                </span>
+              </div>
+
+              <div class="row g-3 mb-3">
+                <div class="col-sm-6 col-md-3">
+                  <div class="p-3 rounded-3 bg-light border text-center h-100">
+                    <small class="text-muted d-block mb-1">RO Generation</small>
+                    <strong class="d-block fs-5" style="color:var(--sp-ink)">2,400 GPD</strong>
+                    <small class="text-success fw-semibold"><i class="bi bi-arrow-up"></i> 99.8% Rejection</small>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                  <div class="p-3 rounded-3 bg-light border text-center h-100">
+                    <small class="text-muted d-block mb-1">Reservoir Tank</small>
+                    <strong class="d-block fs-5" style="color:var(--sp-ink)">1,850 L</strong>
+                    <small class="text-primary fw-semibold">92% Capacity</small>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                  <div class="p-3 rounded-3 bg-light border text-center h-100">
+                    <small class="text-muted d-block mb-1">Virgin DI Resin A</small>
+                    <strong class="d-block fs-5" style="color:var(--sp-ink)">94% Life</strong>
+                    <small class="text-success fw-semibold">Nuclear Grade</small>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                  <div class="p-3 rounded-3 bg-light border text-center h-100">
+                    <small class="text-muted d-block mb-1">Virgin DI Resin B</small>
+                    <strong class="d-block fs-5" style="color:var(--sp-ink)">88% Life</strong>
+                    <small class="text-success fw-semibold">Standby Vessel</small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-3 rounded-3 bg-light border">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="small fw-bold" style="color:var(--sp-ink)">Daily Pure-Water Quota Distributed (Today: 1,480L / 1,850L)</span>
+                  <span class="small fw-bold text-primary">80% Dispatched</span>
+                </div>
+                <div class="progress" style="height: 10px;">
+                  <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-2 small text-muted">
+                  <span><i class="bi bi-truck me-1"></i>Van 1: 380L &middot; Van 2: 420L &middot; Van 3: 290L &middot; Van 4: 390L</span>
+                  <span class="text-success fw-semibold"><i class="bi bi-check-circle-fill me-1"></i>All 4 Skid Tanks 000 PPM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-xl-4">
+            <div class="dash-panel h-100">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="h5 mb-0"><i class="bi bi-award text-primary me-2"></i>Operations &amp; Safety Compliance</h2>
+                <span class="badge bg-primary">OSHA / IRATA Pass</span>
+              </div>
+              <ul class="activity-list mb-3">
+                <li>
+                  <i class="bi bi-shield-fill-check text-success" aria-hidden="true"></i>
+                  <div>
+                    <strong style="color:var(--sp-ink)">Ladder-Free Safety Record</strong>
+                    <small>1,420 Days zero-incident milestone using 50ft &amp; 72ft carbon-fiber water poles.</small>
+                  </div>
+                </li>
+                <li>
+                  <i class="bi bi-check2-all text-primary" aria-hidden="true"></i>
+                  <div>
+                    <strong style="color:var(--sp-ink)">First-Time Streak-Free Quality Rate</strong>
+                    <small>99.6% pass rate with instant digital customer sign-off on tablet.</small>
+                  </div>
+                </li>
+                <li>
+                  <i class="bi bi-umbrella-fill text-info" aria-hidden="true"></i>
+                  <div>
+                    <strong style="color:var(--sp-ink)">48-Hour Rain Shield Re-clean Ratio</strong>
+                    <small>Only 0.18% warranty claims this quarter (Industry benchmark: 3.2%).</small>
+                  </div>
+                </li>
+                <li>
+                  <i class="bi bi-heart-pulse-fill text-danger" aria-hidden="true"></i>
+                  <div>
+                    <strong style="color:var(--sp-ink)">$5M Comprehensive Liability Insurance</strong>
+                    <small>Active policy coverage on all commercial atriums, high-rises and residences.</small>
+                  </div>
+                </li>
+              </ul>
+              <div class="d-flex gap-2">
+                <button class="btn btn-sm btn-outline-brand flex-fill" type="button" onclick="alert('Demo: Exporting OSHA 1910 Certified Rigging and Safety Audit.')">
+                  <i class="bi bi-file-earmark-check me-1"></i> Safety Audit
+                </button>
+                <button class="btn btn-sm btn-brand flex-fill" type="button" onclick="alert('Demo: Purity calibration report generated.')">
+                  <i class="bi bi-printer me-1"></i> Water Certificate
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Skid Equipment Readiness & Priority Service SLA Queue -->
+        <div class="row g-3 g-xl-4 mb-4">
+          <div class="col-lg-8 col-xl-8">
+            <div class="dash-panel h-100">
+              <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+                <div>
+                  <h2 class="h5 mb-0"><i class="bi bi-tools text-primary me-2"></i>Mobile Skid Rig Readiness &amp; Equipment Calibrations</h2>
+                  <small class="text-muted">Daily mechanical, electrical pump, and carbon-reach pole safety audits.</small>
+                </div>
+                <span class="badge bg-success-subtle text-success border border-success-subtle py-2 px-3">
+                  <i class="bi bi-check2-circle me-1"></i> All 4 Rigs Calibrated
+                </span>
+              </div>
+
+              <div class="table-responsive">
+                <table class="table table-sm align-middle mb-0">
+                  <thead class="table-light">
+                    <tr>
+                      <th scope="col">Rig / Equipment</th>
+                      <th scope="col">Technician</th>
+                      <th scope="col">Pressure / Flow</th>
+                      <th scope="col">Pole Elevation</th>
+                      <th scope="col" class="text-end">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong style="color:var(--sp-ink)">Van #1 Ionic Skid</strong><small class="d-block text-muted">Dual-Operator Pure-Water</small></td>
+                      <td>Marcus Vance</td>
+                      <td>100 PSI &bull; 2.4 L/min</td>
+                      <td>45ft Carbon-Fiber</td>
+                      <td class="text-end"><span class="badge bg-success">Ready (100%)</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong style="color:var(--sp-ink)">Van #2 High-Reach</strong><small class="d-block text-muted">72ft Ultra-Modulus Rig</small></td>
+                      <td>Hana Sato</td>
+                      <td>110 PSI &bull; 2.6 L/min</td>
+                      <td>72ft Gardiner Pole</td>
+                      <td class="text-end"><span class="badge bg-success">Ready (100%)</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong style="color:var(--sp-ink)">Van #3 Solarium Rig</strong><small class="d-block text-muted">Algae Scrubber &amp; Sills</small></td>
+                      <td>Liam Chen</td>
+                      <td>90 PSI &bull; 2.2 L/min</td>
+                      <td>35ft Angle-Neck</td>
+                      <td class="text-end"><span class="badge bg-success">Ready (100%)</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong style="color:var(--sp-ink)">Van #4 IRATA Rope Rig</strong><small class="d-block text-muted">High-Rise Descent Gear</small></td>
+                      <td>Elena Rostova</td>
+                      <td>Dual 11mm Static Line</td>
+                      <td>Floor 12-18 Metro</td>
+                      <td class="text-end"><span class="badge bg-success">Certified OK</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-xl-4">
+            <div class="dash-panel h-100">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="h5 mb-0"><i class="bi bi-clock-history text-primary me-2"></i>Priority Service SLA &amp; Warranty Queue</h2>
+                <span class="badge bg-primary">100% On-Time</span>
+              </div>
+              <p class="small text-muted mb-3">Live resolution tracking for 48-hour rain guarantees and commercial contract quote requests:</p>
+
+              <div class="p-2 rounded-3 bg-light border mb-2">
+                <div class="d-flex justify-content-between align-items-start">
+                  <div>
+                    <strong class="d-block" style="color:var(--sp-ink)"><i class="bi bi-cloud-rain text-primary me-1"></i>#REQ-402 &bull; 48h Rain Touch-Up</strong>
+                    <small class="text-muted">Oakridge Terrace &middot; Van #3 Assigned &middot; 15:30 Slot</small>
+                  </div>
+                  <span class="badge bg-info">Dispatched</span>
+                </div>
+              </div>
+
+              <div class="p-2 rounded-3 bg-light border mb-2">
+                <div class="d-flex justify-content-between align-items-start">
+                  <div>
+                    <strong class="d-block" style="color:var(--sp-ink)"><i class="bi bi-calculator text-primary me-1"></i>#EST-910 &bull; Commercial Atrium Quote</strong>
+                    <small class="text-muted">TechHub Riverside &middot; 140 Panes &middot; $620 Generated</small>
+                  </div>
+                  <span class="badge bg-success">Approved</span>
+                </div>
+              </div>
+
+              <div class="p-2 rounded-3 bg-light border">
+                <div class="d-flex justify-content-between align-items-start">
+                  <div>
+                    <strong class="d-block" style="color:var(--sp-ink)"><i class="bi bi-shield-check text-primary me-1"></i>#RIG-114 &bull; Metro Tower Rope Access</strong>
+                    <small class="text-muted">Roof Anchor Tensile Pass: 2,500 daN Verified</small>
+                  </div>
+                  <span class="badge bg-success">Passed</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-3 g-xl-4 mb-4">
+          <div class="col-lg-8 col-xl-8">
+            <div class="dash-panel h-100">
+              <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
+                <h2>Upcoming bookings</h2><a class="btn btn-outline-brand btn-sm" href="bookings.html">View all</a>
+              </div>
+              <div class="table-responsive">
+                <table class="table align-middle">
+                  <caption class="visually-hidden">Upcoming bookings</caption>
+                  <thead class="table-light">
+                    <tr>
+                      <th scope="col">Ref</th>
+                      <th scope="col">Customer</th>
+                      <th scope="col">Service</th>
+                      <th scope="col">Slot</th>
+                      <th scope="col">Cleaner</th>
+                      <th scope="col">Value</th>
+                      <th scope="col">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="adminRecentBookings">
+                    <tr>
+                      <td><strong>#BK-4821</strong></td>
+                      <td><div class="d-flex align-items-center gap-2"><img class="avatar-sm rounded-circle" src="../assets/images/avatars/customer-01.webp" width="32" height="32" alt="Jordan Blake"><span><strong>Jordan Blake</strong><small class="d-block text-muted">42 Willow Lane</small></span></div></td>
+                      <td>Residential Window Cleaning (28 Panes)</td>
+                      <td>24 Oct 2026 <small class="d-block text-muted">10:00 – 12:00</small></td>
+                      <td><span class="badge bg-primary-subtle text-primary border"><i class="bi bi-person-fill me-1"></i>Hana Sato (Van #3)</span></td>
+                      <td><strong>$118.80</strong></td>
+                      <td><span class="status-pill info">Confirmed</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>#BK-4822</strong></td>
+                      <td><div class="d-flex align-items-center gap-2"><img class="avatar-sm rounded-circle" src="../assets/images/team/team-01.webp" width="32" height="32" alt="TechHub Campus"><span><strong>TechHub Riverside</strong><small class="d-block text-muted">900 University Ave</small></span></div></td>
+                      <td>Commercial Curtain Wall &amp; Atrium (140 Panes)</td>
+                      <td>24 Oct 2026 <small class="d-block text-muted">08:30 – 14:00</small></td>
+                      <td><span class="badge bg-primary-subtle text-primary border"><i class="bi bi-person-fill me-1"></i>Marcus Vance (Van #1)</span></td>
+                      <td><strong>$620.00</strong></td>
+                      <td><span class="status-pill ok">Washing (70%)</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>#BK-4823</strong></td>
+                      <td><div class="d-flex align-items-center gap-2"><img class="avatar-sm rounded-circle" src="../assets/images/avatars/customer-02.webp" width="32" height="32" alt="Sterling Medical"><span><strong>Sterling Medical Suites</strong><small class="d-block text-muted">118 Harbour Blvd</small></span></div></td>
+                      <td>Exterior Pure Water Wash + Skylights</td>
+                      <td>25 Oct 2026 <small class="d-block text-muted">09:00 – 11:30</small></td>
+                      <td><span class="badge bg-primary-subtle text-primary border"><i class="bi bi-person-fill me-1"></i>Liam Chen (Van #2)</span></td>
+                      <td><strong>$149.00</strong></td>
+                      <td><span class="status-pill pending">Scheduled</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>#BK-4824</strong></td>
+                      <td><div class="d-flex align-items-center gap-2"><img class="avatar-sm rounded-circle" src="../assets/images/team/team-04.webp" width="32" height="32" alt="Metro Towers"><span><strong>Metro Horizon Condos</strong><small class="d-block text-muted">Floor 12-18 Rope Rig</small></span></div></td>
+                      <td>High-Rise Rope Access Window Wash</td>
+                      <td>26 Oct 2026 <small class="d-block text-muted">08:00 – 16:30</small></td>
+                      <td><span class="badge bg-primary-subtle text-primary border"><i class="bi bi-person-fill me-1"></i>Elena Rostova (Van #4)</span></td>
+                      <td><strong>$1,250.00</strong></td>
+                      <td><span class="status-pill info">Safety Certified</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong>#BK-4825</strong></td>
+                      <td><div class="d-flex align-items-center gap-2"><img class="avatar-sm rounded-circle" src="../assets/images/team/team-03.webp" width="32" height="32" alt="Oakridge Estate"><span><strong>Oakridge Estate</strong><small class="d-block text-muted">74 Crestview Terrace</small></span></div></td>
+                      <td>Conservatory Deep Moss Removal &amp; Sills</td>
+                      <td>27 Oct 2026 <small class="d-block text-muted">13:00 – 15:30</small></td>
+                      <td><span class="badge bg-primary-subtle text-primary border"><i class="bi bi-person-fill me-1"></i>Diego Alvarez (Van #3)</span></td>
+                      <td><strong>$179.00</strong></td>
+                      <td><span class="status-pill ok">Confirmed</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-4">
+            <div class="dash-panel h-100">
+              <h2 class="mb-2">Recent activity</h2>
+              <ul class="activity-list">
+                <li><i class="bi bi-droplet-half text-primary" aria-hidden="true"></i>
+                  <div><strong style="color:var(--sp-ink)">Water Calibration #BK-4821</strong><small>Hana Sato verified 000 PPM deionised water on Van #2</small></div><small class="ms-auto text-nowrap">6 min ago</small>
+                </li>
+                <li><i class="bi bi-star-fill text-warning" aria-hidden="true"></i>
+                  <div><strong style="color:var(--sp-ink)">5-star review received</strong><small>David Sterling: "Second-storey windows are spotless!"</small></div><small class="ms-auto text-nowrap">42 min ago</small>
+                </li>
+                <li><i class="bi bi-credit-card text-success" aria-hidden="true"></i>
+                  <div><strong style="color:var(--sp-ink)">Payment settled</strong><small>Invoice INV-2290 for 28-pane residential clean ($118.80)</small></div><small class="ms-auto text-nowrap">2 hours ago</small>
+                </li>
+                <li><i class="bi bi-shield-check text-info" aria-hidden="true"></i>
+                  <div><strong style="color:var(--sp-ink)">IRATA Rigging Pass</strong><small>Elena Rostova certified Metro Tower anchor bolts</small></div><small class="ms-auto text-nowrap">Yesterday</small>
+                </li>
+                <li><i class="bi bi-calendar2-range text-primary" aria-hidden="true"></i>
+                  <div><strong style="color:var(--sp-ink)">Reschedule approved</strong><small>#BK-4819 conservatory clean moved to Saturday 24 Oct</small></div><small class="ms-auto text-nowrap">Yesterday</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row g-3 g-xl-4">
+          <div class="col-12">
+            <div class="dash-panel">
+              <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+                <h2 class="h5 mb-0"><i class="bi bi-pie-chart text-primary me-2"></i>Service Mix &amp; Category Distribution</h2>
+                <span class="badge bg-primary-subtle text-primary border">Active Q3 Breakdown</span>
+              </div>
+              <div class="row align-items-center g-4">
+                <div class="col-md-5 col-lg-4 text-center">
+                  <div class="donut" role="img"
+                    aria-label="Residential 46 percent, commercial 28 percent, deep cleaning 16 percent, other 10 percent">
+                  </div>
+                  <small class="text-muted d-block mt-2">Overall Volume Distribution</small>
+                </div>
+                <div class="col-md-7 col-lg-8">
+                  <ul class="activity-list">
+                    <li><i class="bi bi-square-fill" style="color:var(--sp-brand)" aria-hidden="true"></i> Residential Window Cleaning <span
+                        class="ms-auto fw-bold" style="color:var(--sp-ink)">46%</span></li>
+                    <li><i class="bi bi-square-fill" style="color:var(--sp-accent)" aria-hidden="true"></i> Commercial Atrium &amp; Storefronts <span
+                        class="ms-auto fw-bold" style="color:var(--sp-ink)">28%</span></li>
+                    <li><i class="bi bi-square-fill" style="color:var(--sp-gold)" aria-hidden="true"></i> Deep Conservatory &amp; Skylights
+                      <span class="ms-auto fw-bold" style="color:var(--sp-ink)">16%</span></li>
+                    <li><i class="bi bi-square-fill" style="color:var(--sp-border)" aria-hidden="true"></i> High-Rise Rope Specialty <span
+                        class="ms-auto fw-bold" style="color:var(--sp-ink)">10%</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="../assets/js/darkmode.js" defer></script>
+  <script src="../assets/js/auth.js" defer></script>
+  <script src="../assets/js/rtl.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/dashboard.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="../assets/js/charts.js" defer></script>
+  <!-- Global Toast -->
+  <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1055">
+    <div id="globalToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive"
+      aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body fw-medium" id="globalToastMsg">
+          <i class="bi bi-check-circle-fill me-2"></i> Action successful.
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+          aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+<script src="../assets/js/admin-search.js" defer></script>
+</body>
+
+</html>
