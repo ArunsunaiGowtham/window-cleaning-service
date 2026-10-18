@@ -24,7 +24,7 @@ window.SP_SERVICES = {
     benefits: [
       { icon: "bi-droplet-half", title: "100% Pure Water System", text: "Zero harsh chemicals or detergent residue. Mineral-free water attracts dirt and dries spotless." },
       { icon: "bi-shield-check", title: "Fully Insured & Vetted", text: "$5M comprehensive public liability cover with background-checked, uniformed technicians." },
-      { icon: "bi-sparkles", title: "Frame & Sill Detailing", text: "We clean the entire window assembly—glass, frames, tracks, and sills—not just the center pane." },
+      { icon: "bi-stars", title: "Frame & Sill Detailing", text: "We clean the entire window assembly—glass, frames, tracks, and sills—not just the center pane." },
       { icon: "bi-brightness-high", title: "Maximum Natural Light", text: "Remove months of traffic film, pollen, bird dirt, and hard water scale to brighten your interiors." }
     ],
     checklist: [

@@ -1762,37 +1762,55 @@ textarea.form-control {
   background: var(--sp-surface);
   border: 1px solid var(--sp-border);
   border-radius: var(--sp-radius-lg);
-  padding: 2rem 1.5rem 1.5rem;
+  padding: 2rem 1.5rem 1.75rem;
   position: relative;
   box-shadow: var(--sp-shadow-sm);
-  transition: transform .25s ease;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .process-card:hover {
   transform: translateY(-6px);
+  border-color: var(--sp-brand);
+  box-shadow: var(--sp-shadow);
 }
 
 .process-card .step {
   position: absolute;
-  inset-block-start: 1rem;
-  inset-inline-end: 1.2rem;
+  inset-block-start: 1.25rem;
+  inset-inline-end: 1.25rem;
   font-family: var(--sp-display);
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 800;
-  color: var(--sp-border);
+  color: var(--sp-brand-dark);
+  line-height: 1;
+  letter-spacing: -0.02em;
 }
 
 .process-card i {
-  font-size: 1.8rem;
-  color: var(--sp-brand);
-  margin-bottom: .8rem;
-  display: block;
+  font-size: 1.85rem;
+  line-height: 1;
+  color: var(--sp-brand-dark);
+  margin-bottom: 1rem;
+  display: inline-block;
+  width: fit-content;
+}
+
+.process-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: .6rem;
+  color: var(--sp-ink);
+  line-height: 1.25;
 }
 
 .process-card p {
   color: var(--sp-muted);
   margin-bottom: 0;
   font-size: .95rem;
+  line-height: 1.55;
+  flex-grow: 1;
 }
 
 .why-media {

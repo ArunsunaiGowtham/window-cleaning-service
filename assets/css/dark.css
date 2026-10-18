@@ -616,3 +616,31 @@
   color: #f8fafc !important;
 }
 
+/* How It Works Process Cards in Dark Mode */
+[data-bs-theme="dark"] .process-card {
+  background: var(--sp-surface);
+  border-color: var(--sp-border);
+}
+
+[data-bs-theme="dark"] .process-card:hover {
+  border-color: rgba(56, 189, 248, 0.45);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+}
+
+[data-bs-theme="dark"] .process-card .step {
+  color: #38bdf8;
+}
+
+[data-bs-theme="dark"] .process-card i {
+  color: #38bdf8;
+}
+
+[data-bs-theme="dark"] .process-card h3 {
+  color: var(--sp-ink);
+}
+
+[data-bs-theme="dark"] .process-card p {
+  color: var(--sp-muted);
+}
+
+
