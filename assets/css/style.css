@@ -606,21 +606,26 @@ textarea.form-control {
   .main-nav .navbar-collapse {
     display: flex !important;
     align-items: center !important;
+    flex-wrap: nowrap !important;
   }
 
   .main-nav .navbar-nav {
     display: flex !important;
     align-items: center !important;
     flex-direction: row !important;
+    flex-wrap: nowrap !important;
     margin-block: 0 !important;
     padding-left: 0;
     gap: .25rem;
+    white-space: nowrap !important;
   }
 
   .main-nav .navbar-nav .nav-item {
     display: flex;
     align-items: center;
     height: 42px;
+    flex-shrink: 0;
+    white-space: nowrap !important;
   }
 
   .main-nav .navbar-nav .nav-link {
@@ -635,6 +640,9 @@ textarea.form-control {
     transition: color .2s ease;
     line-height: 1;
     font-size: .95rem;
+    white-space: nowrap !important;
+    flex-shrink: 0;
+    text-align: center;
   }
 
   .main-nav .navbar-nav .nav-link.active,
@@ -651,6 +659,83 @@ textarea.form-control {
     background: var(--sp-gradient);
     border-radius: 2px;
     pointer-events: none;
+  }
+}
+
+/* Responsive Navbar Spacing: 992px to 1199.98px (Container max-width 960px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .brand-title {
+    font-size: 1.12rem;
+  }
+
+  .brand-sub {
+    font-size: .62rem;
+    letter-spacing: .06em;
+  }
+
+  .main-nav .navbar-nav {
+    gap: .15rem !important;
+  }
+
+  .main-nav .navbar-nav .nav-link {
+    padding: 0 .55rem !important;
+    font-size: .88rem;
+  }
+
+  .main-nav .navbar-nav .nav-link:not(.dropdown-toggle).active::after {
+    inset-inline: .55rem;
+  }
+
+  .home-nav-link {
+    padding: 0.32rem .65rem !important;
+    font-size: .88rem !important;
+    gap: 0.3rem !important;
+  }
+
+  .nav-actions {
+    gap: .35rem;
+  }
+
+  .site-header .nav-actions .btn {
+    padding: 0 .85rem;
+    font-size: .84rem;
+  }
+
+  .site-header .nav-actions .dir-toggle-pill,
+  .site-header .nav-actions button[data-dir-toggle],
+  .site-header .nav-actions #dirToggle {
+    padding: 0 10px !important;
+    font-size: .82rem !important;
+    gap: 5px !important;
+  }
+}
+
+/* Responsive Navbar Spacing: 1200px to 1399.98px (Container max-width 1140px) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .main-nav .navbar-nav {
+    gap: .2rem !important;
+  }
+
+  .main-nav .navbar-nav .nav-link {
+    padding: 0 .75rem !important;
+    font-size: .92rem;
+  }
+
+  .main-nav .navbar-nav .nav-link:not(.dropdown-toggle).active::after {
+    inset-inline: .75rem;
+  }
+
+  .home-nav-link {
+    padding: 0.35rem .75rem !important;
+    font-size: .92rem !important;
+  }
+
+  .nav-actions {
+    gap: .45rem;
+  }
+
+  .site-header .nav-actions .btn {
+    padding: 0 1.05rem;
   }
 }
 
@@ -765,6 +850,8 @@ textarea.form-control {
   text-decoration: none !important;
   transition: all 0.2s ease !important;
   position: relative !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
 }
 
 .home-nav-link::after {
@@ -927,6 +1014,8 @@ textarea.form-control {
   display: flex;
   align-items: center;
   gap: .55rem;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 /* Ensure ALL controls in nav-actions match 42px height & perfect vertical alignment */
