@@ -1353,6 +1353,45 @@ textarea.form-control {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
 }
 
+/* Hero Breadcrumbs (Center-aligned within page-hero) */
+.hero-breadcrumb {
+  margin-bottom: 0.85rem;
+}
+
+.hero-breadcrumb .breadcrumb {
+  justify-content: center !important;
+  text-align: center !important;
+  background: transparent;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.hero-breadcrumb .breadcrumb-item a {
+  color: rgba(255, 255, 255, 0.88) !important;
+  text-decoration: none;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  transition: color 0.2s ease;
+}
+
+.hero-breadcrumb .breadcrumb-item a:hover {
+  color: #ffffff !important;
+  text-decoration: underline;
+}
+
+.hero-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(255, 255, 255, 0.65) !important;
+  content: "/";
+  padding: 0 0.55rem;
+}
+
+.hero-breadcrumb .breadcrumb-item.active {
+  color: #5eead4 !important;
+  font-weight: 600;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
 [data-bs-theme="light"] .page-crumb .breadcrumb-item,
 [data-bs-theme="light"] .page-crumb .breadcrumb-item a {
   color: #405266;
