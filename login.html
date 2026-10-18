@@ -64,11 +64,25 @@
     [data-bs-theme="light"] .auth-page .form-check-label { color: #334155; }
     [data-bs-theme="light"] .auth-page .auth-card a { color: var(--sp-brand-dark, #0284c7); }
     [data-bs-theme="light"] .auth-page .auth-social-google { color: #1e293b; background: #fff; border-color: #94a3b8; }
+    [data-bs-theme="light"] .auth-page .auth-divider { color: #475569 !important; font-weight: 600; }
+    [data-bs-theme="light"] .auth-page .auth-divider::before,
+    [data-bs-theme="light"] .auth-page .auth-divider::after { background: #cbd5e1 !important; }
+    [data-bs-theme="light"] .auth-page .auth-footer { color: #475569; }
+    [data-bs-theme="light"] .auth-page .auth-footer .btn-link { color: #0284c7 !important; }
+    [data-bs-theme="light"] .auth-page .auth-footer .btn-link:hover { color: #0369a1 !important; }
     [data-bs-theme="dark"] .auth-page .form-control { border-color: #60758c; color: #f8fafc; }
     [data-bs-theme="dark"] .auth-page .form-control::placeholder { color: #a8b7c8; }
     [data-bs-theme="dark"] .auth-page .form-check-input { border-color: #8ca0b5; }
     [data-bs-theme="dark"] .auth-page .auth-social-google { color: #f8fafc; background: #162433; border-color: #60758c; }
     [data-bs-theme="dark"] .auth-page .auth-social-apple { border-color: #60758c; }
+    [data-bs-theme="dark"] .auth-page .auth-divider { color: #cbd5e1 !important; }
+    [data-bs-theme="dark"] .auth-page .auth-divider::before,
+    [data-bs-theme="dark"] .auth-page .auth-divider::after { background: rgba(255, 255, 255, .18) !important; }
+    [data-bs-theme="dark"] .auth-page .auth-footer { color: #cbd5e1; }
+    [data-bs-theme="dark"] .auth-page .auth-footer .btn-link { color: #38bdf8 !important; }
+    [data-bs-theme="dark"] .auth-page .auth-footer .btn-link:hover { color: #7dd3fc !important; }
+    .auth-page .auth-footer { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.35rem; margin-top: 1.25rem; font-size: 0.92rem; line-height: 1.5; }
+    .auth-page .auth-footer .btn-link { display: inline-flex; align-items: center; vertical-align: baseline; padding: 0; border: 0; font-size: inherit; line-height: inherit; font-weight: 700; }
     .demo-hint-box {
       border: 1px dashed var(--sp-brand, #0ea5e9);
       border-radius: 12px;
@@ -180,7 +194,7 @@
               <button class="btn auth-social-google js-social-demo" type="button" data-provider="Google"><i class="bi bi-google" aria-hidden="true"></i><span>Continue with Google</span></button>
               <button class="btn auth-social-apple js-social-demo" type="button" data-provider="Apple"><i class="bi bi-apple" aria-hidden="true"></i><span>Continue with Apple</span></button>
             </div>
-            <p class="auth-footer text-center mb-0">Don't have an account? <button type="button" class="btn btn-link p-0 text-decoration-none fw-semibold" id="goToSignupLink" style="color:var(--sp-brand, #0ea5e9);">Create Account / Sign Up</button></p>
+            <p class="auth-footer text-center mb-0"><span>Don't have an account?</span> <button type="button" class="btn btn-link p-0 text-decoration-none fw-semibold" id="goToSignupLink">Create Account / Sign Up</button></p>
           </div>
 
           <!-- Customer Sign Up Pane (Included in Login) -->
@@ -253,7 +267,7 @@
               <button class="btn auth-social-google js-social-demo" type="button" data-provider="Google"><i class="bi bi-google" aria-hidden="true"></i><span>Sign up with Google</span></button>
               <button class="btn auth-social-apple js-social-demo" type="button" data-provider="Apple"><i class="bi bi-apple" aria-hidden="true"></i><span>Sign up with Apple</span></button>
             </div>
-            <p class="auth-footer text-center mb-0">Already have an account? <button type="button" class="btn btn-link p-0 text-decoration-none fw-semibold" id="goToLoginLink" style="color:var(--sp-brand, #0ea5e9);">Sign In</button></p>
+            <p class="auth-footer text-center mb-0"><span>Already have an account?</span> <button type="button" class="btn btn-link p-0 text-decoration-none fw-semibold" id="goToLoginLink">Sign In</button></p>
           </div>
         </div>
 
