@@ -2346,7 +2346,7 @@ textarea.form-control {
 }
 
 .post-body {
-  padding: 1.4rem;
+  padding: 1.35rem 1.25rem;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -2354,17 +2354,37 @@ textarea.form-control {
 
 .post-meta {
   display: flex;
-  flex-wrap: wrap;
-  gap: .85rem;
-  font-size: .82rem;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: .65rem;
+  font-size: .78rem;
   color: var(--sp-muted);
-  margin-bottom: .6rem;
+  margin-bottom: .65rem;
+  min-height: 1.4rem;
+  line-height: 1.3;
 }
 
 .post-meta li {
   display: inline-flex;
   align-items: center;
-  gap: .35rem;
+  gap: .28rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .post-body {
+    padding: 1.2rem 1rem;
+  }
+
+  .post-meta {
+    gap: .45rem;
+    font-size: .72rem;
+  }
+
+  .post-meta li {
+    gap: .22rem;
+  }
 }
 
 .post-body h3,
