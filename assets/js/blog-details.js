@@ -33,7 +33,7 @@ const blogArticlesData = [
     authorRole: "Glass Materials Scientist",
     authorAvatar: "assets/images/team/team-01.webp",
     authorBio: "Dr. Ward holds a doctorate in materials chemistry and specializes in architectural glass silica porosity, alkaline surface breakdown, and restoration.",
-    image: "assets/images/services/before-after-window-cleaning.jpg",
+    image: "assets/images/services/mineral-scale-transformation.jpg",
     lead: "Discover the critical difference between surface calcium scale and permanent silica etching, plus safe commercial restoration methods.",
     heading1: "1. Stage-1 Mineral Scale vs. Stage-2 Glass Etching",
     p1: "Stage-1 mineral stains are topical deposits of calcium carbonate and magnesium left behind by sprinkler overspray. They sit atop the glass and can be dissolved with acidic chelating agents. Stage-2 etching occurs when alkaline minerals leach into the silica structure itself, requiring sub-micron cerium oxide polishing.",

@@ -146,7 +146,7 @@ window.SP_SERVICES = {
     gallery: {
       beforeImg: "assets/images/services/interior-exterior-glass.jpg",
       beforeAlt: "Technician cleaning interior sliding door pane",
-      afterImg: "assets/images/services/before-after-window-cleaning.jpg",
+      afterImg: "assets/images/services/home-2-clarity-hero.jpg",
       afterAlt: "Crystal clear view through double-sided cleaned glass window"
     },
     faq: [
@@ -380,7 +380,7 @@ window.SP_SERVICES = {
     heroTagline: "Safe removal of plaster, cement slurry, paint overspray and protective stickers.",
     price: 199,
     priceNote: "Priced by new build square footage or window count. Glass scratch-waiver inspection included.",
-    heroImage: "assets/images/services/before-after-window-cleaning.jpg",
+    heroImage: "assets/images/services/post-construction-glass.jpg",
     heroAlt: "Before and after comparison of post construction glass detailing",
     metaTitle: "Post-Construction Window Cleaning | CrystalClean Services",
     metaDescription: "Professional builders clean for newly installed windows. Safe removal of cement, mortar, stucco, paint, silicone, and transit stickers without scratching.",
@@ -408,7 +408,7 @@ window.SP_SERVICES = {
     gallery: {
       beforeImg: "assets/images/hero/before-after-window.jpg",
       beforeAlt: "Before post construction clean with paint and mortar spots",
-      afterImg: "assets/images/services/before-after-window-cleaning.jpg",
+      afterImg: "assets/images/services/post-construction-glass.jpg",
       afterAlt: "Sparkling crystal clear glass ready for building handover"
     },
     faq: [
