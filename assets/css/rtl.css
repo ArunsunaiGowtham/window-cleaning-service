@@ -60,7 +60,7 @@
 [dir="rtl"] .link-more .bi,
 [dir="rtl"] .more .bi,
 [dir="rtl"] .btn .bi-arrow-right {
-  transform: scaleX(-1);
+  transform: none;
 }
 
 [dir="rtl"] .pull-quote {
@@ -171,6 +171,8 @@
 [dir="rtl"] .card,
 [dir="rtl"] .panel,
 [dir="rtl"] .card-body,
+[dir="rtl"] .post-card,
+[dir="rtl"] .post-body,
 [dir="rtl"] .service-card,
 [dir="rtl"] .pricing-card,
 [dir="rtl"] .price-card,
@@ -181,6 +183,25 @@
 [dir="rtl"] .feature-card,
 [dir="rtl"] .auth-card {
   text-align: right;
+}
+
+[dir="rtl"] .service-card h3,
+[dir="rtl"] .service-card p,
+[dir="rtl"] .pricing-card h3,
+[dir="rtl"] .pricing-card p,
+[dir="rtl"] .review-card p,
+[dir="rtl"] .testimonial-card blockquote p,
+[dir="rtl"] .team-card h3,
+[dir="rtl"] .team-card p,
+[dir="rtl"] .feature-card h3,
+[dir="rtl"] .feature-card p,
+[dir="rtl"] .about-guarantee-card h3,
+[dir="rtl"] .about-guarantee-card p,
+[dir="rtl"] .about-academy-card h3,
+[dir="rtl"] .about-academy-card p {
+  direction: ltr;
+  text-align: right;
+  unicode-bidi: isolate;
 }
 
 [dir="rtl"] .checklist li,
@@ -309,6 +330,144 @@
 }
 
 /* 5. Blog & Details --------------------------------------- */
+[dir="rtl"] .post-card {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] .post-body {
+  text-align: right;
+}
+
+[dir="rtl"] .post-cat {
+  right: .9rem;
+  left: auto;
+}
+
+[dir="rtl"] .post-meta {
+  direction: rtl;
+  justify-content: flex-start;
+  text-align: right;
+  padding-right: 0;
+  gap: .45rem;
+}
+
+[dir="rtl"] .post-meta li {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+}
+
+[dir="rtl"] .post-meta li i {
+  margin-inline-end: .25rem;
+  margin-inline-start: 0;
+}
+
+[dir="rtl"] .post-body h3,
+[dir="rtl"] .post-body .h5,
+[dir="rtl"] .post-body h3 a,
+[dir="rtl"] .post-body .h5 a {
+  direction: ltr;
+  text-align: right;
+  unicode-bidi: isolate;
+}
+
+[dir="rtl"] .post-body p {
+  direction: ltr;
+  text-align: right;
+  unicode-bidi: isolate;
+}
+
+[dir="rtl"] .post-card .link-more,
+[dir="rtl"] .post-body .link-more {
+  direction: rtl;
+  margin-inline: auto;
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+}
+
+[dir="rtl"] .post-card .link-more:hover,
+[dir="rtl"] .post-body .link-more:hover {
+  gap: .65rem;
+}
+
+/* Seasonal Roadmap in RTL */
+[dir="rtl"] .season-roadmap-card {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] .season-roadmap-card h3,
+[dir="rtl"] .season-roadmap-card p {
+  direction: ltr;
+  text-align: right;
+  unicode-bidi: isolate;
+}
+
+[dir="rtl"] .season-spec-item {
+  direction: rtl;
+}
+
+[dir="rtl"] .season-spec-value {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+/* Myths vs Facts in RTL */
+[dir="rtl"] .myth-fact-card {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] .myth-pill,
+[dir="rtl"] .fact-pill {
+  direction: rtl;
+}
+
+[dir="rtl"] .myth-title,
+[dir="rtl"] .fact-text {
+  direction: ltr;
+  text-align: right;
+  unicode-bidi: isolate;
+}
+
+/* Contributors & Editorial Board in RTL */
+[dir="rtl"] .contributor-card {
+  text-align: center;
+  direction: rtl;
+}
+
+[dir="rtl"] .contributor-name,
+[dir="rtl"] .contributor-role,
+[dir="rtl"] .contributor-bio {
+  direction: ltr;
+  text-align: center;
+  unicode-bidi: isolate;
+}
+
+/* Blog FAQ in RTL */
+[dir="rtl"] .blog-faq-trigger {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] .blog-faq-trigger span:first-child {
+  direction: ltr;
+  text-align: right;
+  unicode-bidi: isolate;
+}
+
+[dir="rtl"] .blog-faq-content {
+  direction: ltr;
+  text-align: right;
+  unicode-bidi: isolate;
+}
+
 [dir="rtl"] .blog-meta {
   justify-content: flex-start;
   text-align: right;
