@@ -62,6 +62,8 @@
   .countdown div { min-width: 78px; padding: .8rem 1rem; }
   .stat-num { font-size: 1.7rem; }
   .tech-image-badge { position: static; margin-top: 0.75rem; border-radius: var(--sp-radius-sm); }
+  .dash-panel.contact-form,
+  .dash-panel.booking-panel { padding: 1.15rem 0.95rem; }
   .blog-detail-hero { min-height: 340px; padding-block: 2.5rem; }
   .blog-detail-hero-title { font-size: clamp(1.9rem, 8vw, 2.25rem); }
   .blog-detail-hero-meta { font-size: .78rem; }
