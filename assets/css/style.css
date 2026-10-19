@@ -4218,9 +4218,47 @@ html[dir="rtl"] .auth-input:has(.auth-toggle-pass)>.form-control {
   text-align: start;
 }
 
-.contact-form .contact-message>textarea.form-control,
-.contact-form .contact-message>label {
+.contact-form .contact-message {
+  position: relative;
+  text-align: start;
+}
+
+.contact-form .contact-message .form-label,
+.contact-form label[for="ctMsg"] {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--sp-ink);
+  margin-bottom: 0.45rem;
+  padding: 0;
+  text-align: start;
+}
+
+.contact-form .contact-message textarea.form-control,
+.contact-form textarea#ctMsg {
+  padding: 0.85rem 1rem;
+  min-height: 120px;
+  line-height: 1.55;
+  border-radius: var(--sp-radius);
+  resize: vertical;
+}
+
+/* Fallback protection against text overlap if form-floating is present */
+.contact-form .form-floating.contact-message > textarea.form-control {
+  padding-top: 2.25rem;
+  padding-bottom: 0.75rem;
   padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+}
+
+.contact-form .form-floating.contact-message > label {
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+  white-space: normal;
+  max-width: 100%;
+  height: auto;
+  overflow: visible;
+  text-overflow: clip;
 }
 
 .contact-form .form-select,
@@ -4289,10 +4327,22 @@ html[dir="rtl"] .contact-form .form-floating>label {
   transform-origin: 100% 0;
 }
 
-html[dir="rtl"] .contact-form .contact-message>textarea.form-control,
-html[dir="rtl"] .contact-form .contact-message>label {
+html[dir="rtl"] .contact-form .contact-message {
+  text-align: right;
+}
+
+html[dir="rtl"] .contact-form .contact-message .form-label,
+html[dir="rtl"] .contact-form label[for="ctMsg"] {
+  text-align: right;
+  direction: rtl;
+}
+
+html[dir="rtl"] .contact-form .contact-message textarea.form-control,
+html[dir="rtl"] .contact-form textarea#ctMsg {
   padding-right: 1rem;
   padding-left: 1rem;
+  text-align: right;
+  direction: rtl;
 }
 
 html[dir="rtl"] .contact-form .form-control,
