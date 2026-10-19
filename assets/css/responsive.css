@@ -45,13 +45,16 @@
   .blog-detail-hero-title { max-inline-size: 100%; }
   .blog-detail-hero-meta { gap: .6rem .85rem; }
 }
+@media (max-width: 640px) {
+  .footer-subscribe-row { flex-direction: column; gap: 10px; }
+  .footer-newsletter .form-control, .footer-newsletter .btn { border-radius: var(--sp-radius-sm) !important; width: 100%; }
+  .footer-newsletter .form-control { border-inline-end: 1px solid #cbd5e1; }
+}
 @media (max-width: 575.98px) {
   .site-footer { padding-top: 60px; }
   .footer-grid { grid-template-columns: 1fr; gap: 40px; }
   .footer-bottom { margin-top: 40px; padding: 24px 0; }
   .footer-bottom ul { justify-content: center; gap: .75rem 1rem; }
-  .footer-subscribe-row { flex-direction: column; gap: 10px; }
-  .footer-newsletter .form-control, .footer-newsletter .btn { border-radius: var(--sp-radius-sm); }
   .btn { width: 100%; }
   .btn-inline, .filter-btn, .icon-btn, .dir-toggle-pill, .input-group .btn, .share-row a, .pagination .page-link { width: auto; }
   .hero-actions { flex-direction: column; }

@@ -616,7 +616,19 @@ html[dir="rtl"] .footer-subscribe-row {
 html[dir="rtl"] .footer-newsletter .form-control {
   direction: rtl;
   text-align: right;
+  unicode-bidi: plaintext;
   border-radius: 0 var(--sp-radius-sm) var(--sp-radius-sm) 0;
+  border-left: none;
+  border-right: 1px solid #cbd5e1;
+}
+
+html[dir="rtl"] .footer-newsletter .form-control:not(:placeholder-shown) {
+  direction: ltr;
+  text-align: right;
+}
+
+html[dir="rtl"] .footer-newsletter .form-control:focus {
+  border-left: 1px solid var(--sp-brand);
 }
 
 html[dir="rtl"] .footer-newsletter .btn {
@@ -687,17 +699,24 @@ html[dir="rtl"] .footer-bottom ul {
   }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 640px) {
   html[dir="rtl"] .footer-subscribe-row {
     flex-direction: column;
+    gap: 10px;
   }
 
   html[dir="rtl"] .footer-newsletter .form-control,
   html[dir="rtl"] .footer-newsletter .btn {
-    border-radius: var(--sp-radius-sm);
+    border-radius: var(--sp-radius-sm) !important;
     width: 100%;
   }
 
+  html[dir="rtl"] .footer-newsletter .form-control {
+    border-left: 1px solid #cbd5e1;
+  }
+}
+
+@media (max-width: 575.98px) {
   [dir="rtl"] .hero-float {
     position: static;
     margin-top: 1rem;
