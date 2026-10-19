@@ -340,7 +340,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const newUrl = window.location.pathname + (newParams.toString() ? '?' + newParams.toString() : '');
         window.history.replaceState({}, '', newUrl);
-        updatePaginationLinks();
     }
 
     function handleEmptyState(visibleCount) {
@@ -365,30 +364,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function updatePaginationLinks() {
-        const paginationLinks = document.querySelectorAll('.pagination a.page-link');
-        paginationLinks.forEach(link => {
-            const href = link.getAttribute('href');
-            if (href && href !== '#' && href !== 'javascript:void(0);') {
-                try {
-                    const linkUrl = new URL(link.href, window.location.origin);
-                    const linkParams = new URLSearchParams(linkUrl.search);
-
-                    if (currentCategory) linkParams.set('category', currentCategory);
-                    if (currentTag) linkParams.set('tag', currentTag);
-                    if (currentSearch) linkParams.set('search', currentSearch);
-
-                    linkUrl.search = linkParams.toString();
-                    link.href = linkUrl.toString();
-                } catch (e) {
-                    // Ignore invalid URLs
-                }
-            }
-        });
-    }
-
     // Initial run
     applyFilters();
-    updatePaginationLinks();
 });
 
