@@ -2403,7 +2403,7 @@ textarea.form-control {
 }
 
 .post-body {
-  padding: 1.35rem 1.25rem;
+  padding: 1.25rem 1.15rem;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -2412,35 +2412,46 @@ textarea.form-control {
 .post-meta {
   display: flex;
   align-items: center;
-  flex-wrap: nowrap;
-  gap: .65rem;
-  font-size: .78rem;
+  flex-wrap: nowrap !important;
+  gap: .45rem;
+  font-size: .74rem;
   color: var(--sp-muted);
   margin-bottom: .65rem;
-  min-height: 1.4rem;
+  height: 1.55rem;
+  min-height: 1.55rem;
+  max-height: 1.55rem;
   line-height: 1.3;
+  overflow: hidden;
+  width: 100%;
 }
 
 .post-meta li {
   display: inline-flex;
   align-items: center;
-  gap: .28rem;
+  gap: .22rem;
   white-space: nowrap;
   flex-shrink: 0;
 }
 
+.post-meta li:first-child {
+  flex-shrink: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .post-body {
-    padding: 1.2rem 1rem;
+    padding: 1.15rem 0.95rem;
   }
 
   .post-meta {
-    gap: .45rem;
-    font-size: .72rem;
+    gap: .35rem;
+    font-size: .7rem;
   }
 
   .post-meta li {
-    gap: .22rem;
+    gap: .18rem;
   }
 }
 
@@ -2450,7 +2461,9 @@ textarea.form-control {
   font-weight: 700;
   line-height: 1.38;
   margin-bottom: .65rem;
+  height: 3.2rem;
   min-height: 3.2rem;
+  max-height: 3.2rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -2470,9 +2483,11 @@ textarea.form-control {
 .post-body p {
   color: var(--sp-muted);
   font-size: .92rem;
-  line-height: 1.6;
+  line-height: 1.55;
   margin-bottom: 1.25rem;
-  min-height: 4.4rem;
+  height: 4.3rem;
+  min-height: 4.3rem;
+  max-height: 4.3rem;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
