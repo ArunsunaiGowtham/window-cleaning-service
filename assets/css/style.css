@@ -64,13 +64,27 @@ section[id] {
   }
 }
 
+html {
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
 body {
   font-family: var(--sp-font);
   color: var(--sp-body);
   background: var(--sp-bg);
   line-height: 1.7;
   overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+main {
+  overflow-x: hidden;
+  overflow-x: clip;
+  width: 100%;
 }
 
 h1,
@@ -143,7 +157,10 @@ img {
 }
 
 .section {
+  position: relative;
   padding-block: var(--sp-section-y);
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .section-head {
@@ -1147,6 +1164,10 @@ textarea.form-control {
 .mobile-nav {
   background: var(--sp-surface);
   width: min(360px, 88vw);
+}
+
+.offcanvas:not(.show):not(.showing):not(.hiding) {
+  display: none !important;
 }
 
 .mobile-nav .nav-link {
