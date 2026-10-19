@@ -93,7 +93,7 @@ window.SP_SERVICES = {
     gallery: {
       beforeImg: "assets/images/services/commercial-window-cleaning.jpg",
       beforeAlt: "Commercial glass facade during high reach cleaning",
-      afterImg: "assets/images/hero/hero-window-cleaner.jpg",
+      afterImg: "assets/images/services/before-after-window-cleaning.jpg",
       afterAlt: "Spotless commercial glass overlooking modern city skyline"
     },
     faq: [
@@ -252,7 +252,7 @@ window.SP_SERVICES = {
     gallery: {
       beforeImg: "assets/images/services/skylight-conservatory-cleaning.jpg",
       beforeAlt: "Technician washing conservatory roof glass with soft brush",
-      afterImg: "assets/images/hero/hero-window-cleaner.jpg",
+      afterImg: "assets/images/services/mineral-scale-transformation.jpg",
       afterAlt: "Pristine sunroom glass ceiling glistening in sunlight"
     },
     faq: [
