@@ -64,28 +64,24 @@ section[id] {
   }
 }
 
-html {
-  overflow-x: hidden;
-  overflow-x: clip;
-}
-
 body {
   font-family: var(--sp-font);
   color: var(--sp-body);
   background: var(--sp-bg);
   line-height: 1.7;
-  overflow-x: hidden;
-  overflow-x: clip;
   width: 100%;
-  max-width: 100%;
+  margin: 0;
   position: relative;
 }
 
-main {
+main,
+.section {
+  position: relative;
   overflow-x: hidden;
   overflow-x: clip;
   width: 100%;
 }
+
 
 h1,
 h2,
@@ -516,9 +512,11 @@ textarea.form-control {
 
 /* 4. Header ----------------------------------------------- */
 .site-header {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1030;
+  width: 100%;
 }
 
 .topbar {
@@ -711,48 +709,58 @@ textarea.form-control {
 /* Responsive Navbar Spacing: 992px to 1199.98px (Container max-width 960px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .brand-title {
-    font-size: 1.12rem;
+    font-size: 1.1rem;
   }
 
   .brand-sub {
-    font-size: .62rem;
-    letter-spacing: .06em;
+    font-size: .6rem;
+    letter-spacing: .05em;
   }
 
   .main-nav .navbar-nav {
-    gap: .15rem !important;
+    gap: .1rem !important;
   }
 
   .main-nav .navbar-nav .nav-link {
-    padding: 0 .55rem !important;
-    font-size: .88rem;
+    padding: 0 .45rem !important;
+    font-size: .84rem !important;
   }
 
   .main-nav .navbar-nav .nav-link:not(.dropdown-toggle).active::after {
-    inset-inline: .55rem;
+    inset-inline: .45rem;
   }
 
   .home-nav-link {
-    padding: 0.32rem .65rem !important;
-    font-size: .88rem !important;
-    gap: 0.3rem !important;
+    padding: 0.3rem .55rem !important;
+    font-size: .84rem !important;
+    gap: 0.25rem !important;
   }
 
   .nav-actions {
-    gap: .35rem;
+    gap: .25rem !important;
   }
 
   .site-header .nav-actions .btn {
-    padding: 0 .85rem;
-    font-size: .84rem;
+    padding: 0 .65rem !important;
+    font-size: .82rem !important;
+    height: 38px !important;
+    min-height: 38px !important;
   }
 
   .site-header .nav-actions .dir-toggle-pill,
   .site-header .nav-actions button[data-dir-toggle],
   .site-header .nav-actions #dirToggle {
-    padding: 0 10px !important;
-    font-size: .82rem !important;
-    gap: 5px !important;
+    padding: 0 8px !important;
+    font-size: .8rem !important;
+    gap: 4px !important;
+    height: 38px !important;
+    min-height: 38px !important;
+  }
+
+  .site-header .nav-actions .icon-btn {
+    width: 38px !important;
+    height: 38px !important;
+    min-height: 38px !important;
   }
 }
 
@@ -5349,11 +5357,21 @@ h6 {
   box-sizing: border-box !important;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
+  .col-lg-3 .price-card,
+  .col-lg-3 .pricing-card,
   .col-xl-3 .price-card,
   .col-xl-3 .pricing-card {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
+  }
+
+  .col-lg-3 .price-row .amount,
+  .col-lg-3 .pricing-card .amount,
+  .col-xl-3 .price-row .amount,
+  .col-xl-3 .pricing-card .amount {
+    font-size: 2.1rem;
+    white-space: nowrap;
   }
 }
 
