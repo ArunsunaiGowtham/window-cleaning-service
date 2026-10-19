@@ -10,6 +10,38 @@
     return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   };
 
+  const setupButton = (btn, theme) => {
+    btn.setAttribute("aria-pressed", String(theme === "dark"));
+    btn.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+
+    const icon = btn.querySelector("i");
+    if (icon) {
+      icon.className = theme === "dark" ? "bi bi-brightness-high" : "bi bi-moon-stars";
+    }
+
+    const isMobileOrPill = btn.classList.contains("theme-toggle-pill") ||
+                           btn.classList.contains("flex-fill") ||
+                           (btn.closest && btn.closest(".mobile-nav"));
+
+    if (isMobileOrPill) {
+      btn.classList.add("theme-toggle-pill");
+      btn.classList.remove("icon-btn");
+      let textSpan = btn.querySelector(".theme-toggle-text");
+      if (!textSpan) {
+        textSpan = document.createElement("span");
+        textSpan.className = "theme-toggle-text";
+        textSpan.setAttribute("aria-hidden", "true");
+        btn.appendChild(textSpan);
+      }
+      textSpan.textContent = theme === "dark" ? "Light" : "Dark";
+    } else {
+      const textSpan = btn.querySelector(".theme-toggle-text");
+      if (textSpan) {
+        textSpan.textContent = theme === "dark" ? "Light" : "Dark";
+      }
+    }
+  };
+
   const paint = (theme) => {
     root.setAttribute("data-bs-theme", theme);
     document.querySelectorAll(".site-footer .footer-brand img").forEach((logo) => {
@@ -24,22 +56,31 @@
       }
     });
     document.querySelectorAll("#themeToggle, [data-theme-toggle]").forEach((btn) => {
-      btn.setAttribute("aria-pressed", String(theme === "dark"));
-      const icon = btn.querySelector("i");
-      if (icon) icon.className = theme === "dark" ? "bi bi-brightness-high" : "bi bi-moon-stars";
+      setupButton(btn, theme);
     });
   };
 
   paint(preferred());
 
-  document.addEventListener("DOMContentLoaded", () => {
-    paint(root.getAttribute("data-bs-theme"));
+  const bindEvents = () => {
+    paint(root.getAttribute("data-bs-theme") || preferred());
     document.querySelectorAll("#themeToggle, [data-theme-toggle]").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const next = root.getAttribute("data-bs-theme") === "dark" ? "light" : "dark";
-        localStorage.setItem(KEY, next);
-        paint(next);
-      });
+      if (!btn._themeBound) {
+        btn._themeBound = true;
+        btn.addEventListener("click", () => {
+          const current = root.getAttribute("data-bs-theme") === "dark" ? "dark" : "light";
+          const next = current === "dark" ? "light" : "dark";
+          localStorage.setItem(KEY, next);
+          paint(next);
+        });
+      }
     });
-  });
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", bindEvents);
+  } else {
+    bindEvents();
+  }
 })();
+

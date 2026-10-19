@@ -56,7 +56,7 @@
   .footer-bottom { margin-top: 40px; padding: 24px 0; }
   .footer-bottom ul { justify-content: center; gap: .75rem 1rem; }
   .btn { width: 100%; }
-  .btn-inline, .filter-btn, .icon-btn, .dir-toggle-pill, .input-group .btn, .share-row a, .pagination .page-link { width: auto; }
+  .btn-inline, .filter-btn, .icon-btn, .dir-toggle-pill, .theme-toggle-pill, .input-group .btn, .share-row a, .pagination .page-link { width: auto; }
   .hero-actions { flex-direction: column; }
   .hero-float { position: static; margin-top: 1rem; max-width: none; }
   .countdown div { min-width: 78px; padding: .8rem 1rem; }

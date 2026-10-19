@@ -321,8 +321,11 @@ img {
   border-color: var(--sp-brand);
 }
 
-/* Direction Toggle Pill Button (Matches Reference) */
+/* Direction & Theme Toggle Pill Buttons (Matches Reference) */
 .dir-toggle-pill,
+.theme-toggle-pill,
+.mobile-nav button[data-theme-toggle],
+.mobile-nav .icon-btn.flex-fill,
 .icon-btn.dir-toggle,
 button[data-dir-toggle],
 #dirToggle {
@@ -349,7 +352,15 @@ button[data-dir-toggle],
   user-select: none;
 }
 
+.icon-btn.flex-fill {
+  border-radius: 999px !important;
+  width: auto !important;
+}
+
 .dir-toggle-pill:hover,
+.theme-toggle-pill:hover,
+.mobile-nav button[data-theme-toggle]:hover,
+.mobile-nav .icon-btn.flex-fill:hover,
 .icon-btn.dir-toggle:hover,
 button[data-dir-toggle]:hover,
 #dirToggle:hover {
@@ -361,6 +372,9 @@ button[data-dir-toggle]:hover,
 }
 
 .dir-toggle-pill:active,
+.theme-toggle-pill:active,
+.mobile-nav button[data-theme-toggle]:active,
+.mobile-nav .icon-btn.flex-fill:active,
 .icon-btn.dir-toggle:active,
 button[data-dir-toggle]:active,
 #dirToggle:active {
@@ -379,7 +393,19 @@ button[data-dir-toggle] .dir-toggle-icon,
   color: currentColor;
 }
 
+.theme-toggle-pill i,
+.mobile-nav button[data-theme-toggle] i {
+  font-size: 1.05rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: currentColor;
+}
+
 .dir-toggle-pill .dir-toggle-text,
+.theme-toggle-pill .theme-toggle-text,
+.mobile-nav button[data-theme-toggle] .theme-toggle-text,
 .icon-btn.dir-toggle span,
 button[data-dir-toggle] span,
 #dirToggle span {
@@ -390,6 +416,8 @@ button[data-dir-toggle] span,
 }
 
 [dir="rtl"] .dir-toggle-pill,
+[dir="rtl"] .theme-toggle-pill,
+[dir="rtl"] .mobile-nav button[data-theme-toggle],
 [dir="rtl"] .icon-btn.dir-toggle,
 [dir="rtl"] button[data-dir-toggle],
 [dir="rtl"] #dirToggle {
