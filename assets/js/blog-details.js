@@ -15,7 +15,7 @@ const blogArticlesData = [
     authorRole: "Residential Quality Lead",
     authorAvatar: "assets/images/team/team-03.webp",
     authorBio: "Hana has audited more than 6,000 residential window jobs and specializes in pure water filtration and delicate glass care.",
-    image: "assets/images/services/residential-window-cleaning.jpg",
+    image: "assets/images/blog/blog-residential-schedule.jpg",
     lead: "From pollen season to coastal salt spray, find the ideal cleaning frequency to prevent irreversible mineral etching on glass.",
     heading1: "1. The Difference Between Weather Soil and Mineral Etching",
     p1: "Windblown dust and raindrops contain micro-particles of calcium, silica, and airborne pollutants. When left in direct sunlight, the heat of the sun bakes these minerals into the microscopic pores of the glass. Over 6 to 12 months, this process causes stage-two corrosion known as glass etching.",
