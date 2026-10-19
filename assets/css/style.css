@@ -591,6 +591,7 @@ textarea.form-control {
   display: block;
   margin-top: .18rem;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .brand-text span {
@@ -5465,21 +5466,26 @@ h6 {
 }
 
 .dash-sidebar-ref .brand-title {
+  font-family: var(--sp-display, inherit);
   font-size: 1.25rem;
   font-weight: 800;
-  color: #0f172a;
+  color: var(--sp-ink);
   line-height: 1.1;
   display: block;
+  letter-spacing: -0.01em;
 }
 
 .dash-sidebar-ref .brand-sub {
+  font-family: var(--sp-font-sans, inherit);
   font-size: .68rem;
   font-weight: 700;
   color: #64748b;
   letter-spacing: .08em;
   text-transform: uppercase;
   display: block;
-  margin-top: .15rem;
+  margin-top: .18rem;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .dash-sidebar-ref .dossier-card {

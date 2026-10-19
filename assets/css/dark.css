@@ -87,9 +87,11 @@
 [data-bs-theme="dark"] .page-hero h1, [data-bs-theme="dark"] .blog-detail-hero-title { color: #ffffff !important; text-shadow: 0 2px 10px rgba(0,0,0,0.75); }
 [data-bs-theme="dark"] .page-hero .eyebrow, [data-bs-theme="dark"] .hero .eyebrow { color: #5eead4 !important; background: rgba(11, 26, 38, 0.92) !important; border: 1px solid rgba(94, 234, 212, 0.5) !important; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5) !important; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
 [data-bs-theme="dark"] .brand-title,
-[data-bs-theme="dark"] .navbar-brand .brand-title { color: #ffffff !important; }
+[data-bs-theme="dark"] .navbar-brand .brand-title,
+[data-bs-theme="dark"] .dash-sidebar-ref .brand-title { color: #ffffff !important; }
 [data-bs-theme="dark"] .brand-sub,
-[data-bs-theme="dark"] .navbar-brand .brand-sub { color: #94a3b8 !important; }
+[data-bs-theme="dark"] .navbar-brand .brand-sub,
+[data-bs-theme="dark"] .dash-sidebar-ref .brand-sub { color: #94a3b8 !important; }
 [data-bs-theme="dark"] .brand-icon-sq { background: #0284c7; color: #ffffff; box-shadow: 0 4px 12px rgba(2, 132, 199, 0.4); }
 [data-bs-theme="dark"] .navbar-brand .brand-text { color: #ffffff !important; }
 [data-bs-theme="dark"] .navbar-brand .brand-text span { color: #2dd4bf !important; }
