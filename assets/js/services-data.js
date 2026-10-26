@@ -252,7 +252,7 @@ window.SP_SERVICES = {
     gallery: {
       beforeImg: "assets/images/services/skylight-conservatory-cleaning.jpg",
       beforeAlt: "Technician washing conservatory roof glass with soft brush",
-      afterImg: "assets/images/services/mineral-scale-transformation.jpg",
+      afterImg: "assets/images/services/sunroom-roof-cleaning.jpg",
       afterAlt: "Pristine sunroom glass ceiling glistening in sunlight"
     },
     faq: [
@@ -330,7 +330,7 @@ window.SP_SERVICES = {
     heroTagline: "Maximize solar efficiency and energy output by up to 30% with mineral-free pure water.",
     price: 99,
     priceNote: "Packages priced based on solar array size (up to 20 panels standard).",
-    heroImage: "assets/images/services/skylight-conservatory-cleaning.jpg",
+    heroImage: "assets/images/services/solar-panel-cleaning.jpg",
     heroAlt: "Technician cleaning rooftop solar photovoltaic panels with soft water-fed brush",
     metaTitle: "Solar Panel Cleaning | CrystalClean Services",
     metaDescription: "Professional pure water solar panel cleaning. Increase energy output up to 30%. Chemical-free, non-scratch soft brush technology for residential & commercial arrays.",
@@ -356,7 +356,7 @@ window.SP_SERVICES = {
       "Annual solar care reminder scheduled"
     ],
     gallery: {
-      beforeImg: "assets/images/services/skylight-conservatory-cleaning.jpg",
+      beforeImg: "assets/images/services/solar-panel-cleaning.jpg",
       beforeAlt: "Solar panels being cleaned with water-fed pole",
       afterImg: "assets/images/services/residential-window-cleaning.jpg",
       afterAlt: "Clean solar array reflecting bright blue sky"
@@ -420,5 +420,56 @@ window.SP_SERVICES = {
     ],
     related: ["commercial-window-cleaning", "residential-window-cleaning", "frame-screen-cleaning", "high-rise-window-cleaning"],
     sidebarBullets: ["Tempered-glass certified", "Adhesive & render removal", "Handover certificate issued"]
+  },
+
+  /* ================= 9. HARD WATER STAIN RESTORATION ================= */
+  "hard-water-stain-removal": {
+    label: "Hard Water Stain Restoration",
+    category: "specialist",
+    heroTagline: "Eliminate etched mineral scale, calcium haze, and sprinkler water spot buildup.",
+    price: 149,
+    priceNote: "Specialist chemical descaling & compound polish for etched glass panes.",
+    heroImage: "assets/images/services/mineral-scale-transformation.jpg",
+    heroAlt: "Dramatic before and after hard water mineral scale removal on exterior glass patio doors",
+    metaTitle: "Hard Water Stain Removal & Glass Restoration | CrystalClean Services",
+    metaDescription: "Professional chemical descaling and cerium oxide polishing to eliminate hard water mineral deposits, calcium haze, and acid rain etching from architectural glass.",
+    crew: "2-person certified restoration specialists, 2–3 hours",
+    overview: [
+      "Hard water deposits from lawn sprinklers, mineral-rich runoff, and acid rain contain silica, calcium, and magnesium. Over time, these minerals bond chemically with the porous surface of the glass, creating a cloudy, milky white haze that ordinary soap or pressure washing cannot budge.",
+      "Our specialized glass restoration service employs acid-free restorative descaling compounds and rotary cerium oxide buffing pads. We safely dissolve mineral calcification and polish the glass back to optical factory clarity without scratching or requiring costly pane replacement."
+    ],
+    benefits: [
+      { icon: "bi-shield-check", title: "Dissolves Mineral Bonding", text: "Targeted cerium oxide compound breaks down calcium and silica scale without etching glass." },
+      { icon: "bi-stars", title: "Saves Replacement Costs", text: "Restore severely damaged windows for a fraction of the cost of new glass installation." },
+      { icon: "bi-sun", title: "100% Optical Transparency", text: "Brings cloudy, oxidized windows back to factory transparency with maximum light throughput." },
+      { icon: "bi-shield-plus", title: "Hydrophobic Sealant", text: "We apply a silane protective hydrophobic coating to repel future mineral water spots." }
+    ],
+    checklist: [
+      "Digital coating and glass thickness survey to determine mineral penetration depth",
+      "Perimeter masking of architectural aluminium, wood, and rubber gaskets",
+      "Application of bio-friendly mineral-dissolving non-etching pre-treatment",
+      "Precision mechanical rotary polishing using fine cerium oxide suspension",
+      "Spotless dual-stage deionised pure water rinse",
+      "Inspection under high-intensity cross-lighting to ensure zero remaining haze",
+      "Application of durable hydrophobic water-beading barrier coating",
+      "Comprehensive 6-month scale-free warranty"
+    ],
+    gallery: {
+      beforeImg: "assets/images/hero/before-after-window.jpg",
+      beforeAlt: "Cloudy hard water mineral scale buildup on exterior glass pane",
+      afterImg: "assets/images/services/mineral-scale-transformation.jpg",
+      afterAlt: "Pristine clear glass after mineral scale restoration"
+    },
+    faq: [
+      { q: "Can hard water stains permanently damage glass if ignored?", a: "Yes. Calcium and silica minerals can chemically etch the silica in the glass itself, leading to permanent corrosion. Early restoration removes scale before glass replacement becomes necessary." },
+      { q: "Will your descaling process scratch tinted or Low-E glass?", a: "No. Low-E coatings on modern windows are typically installed on the interior faces (surfaces 2 or 3). Exterior polishing is completely safe for Low-E glass, and we use non-scratch cerium oxide compounds." },
+      { q: "How do I keep hard water stains from coming back?", a: "Every restoration concludes with a commercial hydrophobic nano-sealant that makes water sheet off rather than bead and bake in the sun. We also advise adjusting sprinkler spray angles away from glass." }
+    ],
+    reviews: [
+      { name: "Daniel Brooks", role: "Apartment Resident, Lakeside", avatar: "assets/images/testimonials/customer-05.png", quote: "Our patio glass had 5 years of sprinkler calcification that looked completely opaque. CrystalClean completely restored it in one afternoon!" },
+      { name: "Eleanor Vance", role: "Homeowner, Oakridge", avatar: "assets/images/testimonials/customer-01.webp", quote: "I was quoted $2,400 to replace our fogged sliding doors. CrystalClean polished out all the hard water stains for a fraction of that price." }
+    ],
+    related: ["residential-window-cleaning", "interior-exterior-glass", "frame-screen-cleaning", "skylight-conservatory-cleaning"],
+    sidebarBullets: ["Cerium oxide compound polishing", "Hydrophobic protective seal", "Saves costly glass replacement"]
   }
 };
