@@ -541,10 +541,21 @@
   direction: rtl;
 }
 
-[dir="rtl"] .dash-sidebar {
+[dir="rtl"] .dash-sidebar,
+[dir="rtl"] .dash-sidebar-ref:not(.offcanvas) {
   border-left: 1px solid var(--sp-border);
   border-right: none;
   text-align: right;
+}
+
+[dir="rtl"] .dash-sidebar-ref .ref-nav-btn,
+[dir="rtl"] .ref-nav-btn {
+  text-align: right !important;
+}
+
+[dir="rtl"] .dash-sidebar-ref .ref-badge {
+  margin-left: 0;
+  margin-right: auto;
 }
 
 [dir="rtl"] .dash-nav .nav-link {

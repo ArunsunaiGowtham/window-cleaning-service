@@ -73,7 +73,7 @@
         </ul>
         <div class="nav-actions">
           <button class="icon-btn" type="button" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false"><i class="bi bi-moon-stars" aria-hidden="true"></i></button>
-          <button class="dir-toggle-pill" type="button" id="dirToggle" data-dir-toggle aria-label="Switch to right to left layout"><svg class="dir-toggle-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16M15 4l5 4-5 4M20 16H4M9 12l-5 4 5 4"/></svg><span class="dir-toggle-text" aria-hidden="true">RTL</span></button>
+          <button class="icon-btn dir-toggle" type="button" id="dirToggle" data-dir-toggle aria-label="Switch to right to left layout"><span class="dir-toggle-text" aria-hidden="true">RTL</span></button>
           <a class="btn btn-outline-brand" href="customer-dashboard.html">Dashboard</a>
           <a class="btn btn-brand" href="login.html">Login</a>
         </div>
@@ -115,7 +115,7 @@
       <div class="d-grid gap-2">
         <div class="d-flex gap-2">
           <button class="theme-toggle-pill flex-fill" type="button" data-theme-toggle aria-label="Toggle dark mode"><i class="bi bi-moon-stars" aria-hidden="true"></i><span class="theme-toggle-text" aria-hidden="true">Dark</span></button>
-          <button class="dir-toggle-pill flex-fill" type="button" data-dir-toggle aria-label="Switch text direction"><svg class="dir-toggle-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16M15 4l5 4-5 4M20 16H4M9 12l-5 4 5 4"/></svg><span class="dir-toggle-text" aria-hidden="true">RTL</span></button>
+          <button class="dir-toggle-pill flex-fill" type="button" data-dir-toggle aria-label="Switch text direction"><span class="dir-toggle-text" aria-hidden="true">RTL</span></button>
         </div>
         <a class="btn btn-outline-brand" href="customer-dashboard.html">Dashboard</a>
         <a class="btn btn-brand" href="login.html">Login</a>
@@ -130,6 +130,12 @@
     <img src="assets/images/hero/blog-hero.jpg" alt="Window cleaning specialist maintaining high-rise architectural glass" width="1920" height="700">
   </div>
   <div class="container page-hero-content text-center">
+    <nav class="hero-breadcrumb" aria-label="Breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Blog</li>
+      </ol>
+    </nav>
     <p class="eyebrow" data-aos="fade-up">Glass Care Journal</p>
     <h1 data-aos="fade-up" data-aos-delay="60">Window Cleaning Insights &amp; Guides</h1>
     <p class="lead" data-aos="fade-up" data-aos-delay="120">Practical advice on glass care, the science of pure water, and architectural maintenance from our technicians.</p>
@@ -177,7 +183,7 @@
             </ul>
             <h3 class="h5"><a href="blog-details.html?id=1">How Often Should You Wash Residential Windows?</a></h3>
             <p>From pollen season to coastal salt spray, find the ideal cleaning frequency to prevent irreversible mineral etching on glass.</p>
-            <a class="link-more mx-auto" href="blog-details.html?id=1">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            <a class="link-more text-start" href="blog-details.html?id=1">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
       </div>
@@ -197,7 +203,7 @@
             </ul>
             <h3 class="h5"><a href="blog-details.html?id=2">Hard Water Stains vs. Mineral Etching: Restoration Guide</a></h3>
             <p>Discover the difference between surface calcium scale and permanent silica etching, plus safe commercial restoration methods.</p>
-            <a class="link-more mx-auto" href="blog-details.html?id=2">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            <a class="link-more text-start" href="blog-details.html?id=2">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
       </div>
@@ -217,7 +223,7 @@
             </ul>
             <h3 class="h5"><a href="blog-details.html?id=3">Mastering the S-Method Squeegee Glide for Flawless Glass</a></h3>
             <p>Professional squeegee techniques used by veteran window cleaners to eliminate edge bleeding, streaks, and rag marks.</p>
-            <a class="link-more mx-auto" href="blog-details.html?id=3">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            <a class="link-more text-start" href="blog-details.html?id=3">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
       </div>
@@ -237,7 +243,7 @@
             </ul>
             <h3 class="h5"><a href="blog-details.html?id=4">The Science of Pure Water: Why Zero TDS Prevents Spots</a></h3>
             <p>Discover why mineral-free deionised water lifts stubborn grime without detergents and dries 100% streak-free.</p>
-            <a class="link-more mx-auto" href="blog-details.html?id=4">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            <a class="link-more text-start" href="blog-details.html?id=4">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
       </div>
@@ -257,7 +263,7 @@
             </ul>
             <h3 class="h5"><a href="blog-details.html?id=5">Reverse Osmosis vs. Deionization: Inside Our Mobile Filtration Van</a></h3>
             <p>Explore the multi-stage resin filters and sediment membranes our technicians use to create 99.99% pure laboratory-grade rinse water.</p>
-            <a class="link-more mx-auto" href="blog-details.html?id=5">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            <a class="link-more text-start" href="blog-details.html?id=5">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
       </div>
@@ -277,7 +283,7 @@
             </ul>
             <h3 class="h5"><a href="blog-details.html?id=6">Carbon Fiber Water-Fed Poles: Reaching 60 Feet Safely</a></h3>
             <p>How ultra-light composite telescopic poles eliminate dangerous ladder setups while delivering spotless finishes to third-story windows.</p>
-            <a class="link-more mx-auto" href="blog-details.html?id=6">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            <a class="link-more text-start" href="blog-details.html?id=6">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
       </div>
@@ -297,7 +303,7 @@
             </ul>
             <h3 class="h5"><a href="blog-details.html?id=7">High-Rise Window Cleaning: Rigging, Safety &amp; Standards</a></h3>
             <p>An inside look at how IRATA certified rope technicians safely maintain curtain wall glass on skyscrapers.</p>
-            <a class="link-more mx-auto" href="blog-details.html?id=7">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            <a class="link-more text-start" href="blog-details.html?id=7">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
       </div>
@@ -317,7 +323,7 @@
             </ul>
             <h3 class="h5"><a href="blog-details.html?id=8">Commercial Facade Maintenance: Preserving Architectural Glass</a></h3>
             <p>Curtain wall facades require scheduled maintenance to prevent sealant breakdown and sulfur degradation on Low-E glass coatings.</p>
-            <a class="link-more mx-auto" href="blog-details.html?id=8">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            <a class="link-more text-start" href="blog-details.html?id=8">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
       </div>
@@ -337,7 +343,7 @@
             </ul>
             <h3 class="h5"><a href="blog-details.html?id=9">Retail Storefront Glass Maintenance: First Impressions Matter</a></h3>
             <p>Why retail boutique display windows require bi-weekly morning cleans to eliminate traffic exhaust film and hand smudges.</p>
-            <a class="link-more mx-auto" href="blog-details.html?id=9">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            <a class="link-more text-start" href="blog-details.html?id=9">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
       </div>
@@ -357,7 +363,7 @@
             </ul>
             <h3 class="h5"><a href="blog-details.html?id=10">Spring Conservatory &amp; Skylight Glass Care Guide</a></h3>
             <p>How to safely clear moss, lichen, and baked-on pollen from sunrooms and roof lanterns to restore natural light.</p>
-            <a class="link-more mx-auto" href="blog-details.html?id=10">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            <a class="link-more text-start" href="blog-details.html?id=10">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
       </div>
@@ -377,7 +383,7 @@
             </ul>
             <h3 class="h5"><a href="blog-details.html?id=11">Window Track &amp; Screen Detailing: Protecting Air Quality</a></h3>
             <p>Dirty flyscreens and window sliders trap allergens and mold spores that circulate indoors. Here is our deep detailing protocol.</p>
-            <a class="link-more mx-auto" href="blog-details.html?id=11">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            <a class="link-more text-start" href="blog-details.html?id=11">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
       </div>
@@ -397,7 +403,7 @@
             </ul>
             <h3 class="h5"><a href="blog-details.html?id=12">Overhead Glass Lanterns &amp; Sunroom Roof Cleaning Protocols</a></h3>
             <p>Overhead sloped glazing requires specialized non-abrasive soft brushes and zero-TDS pure water to protect silicone seals.</p>
-            <a class="link-more mx-auto" href="blog-details.html?id=12">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            <a class="link-more text-start" href="blog-details.html?id=12">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
       </div>
@@ -417,7 +423,7 @@
             </ul>
             <h3 class="h5"><a href="blog-details.html?id=13">Solar Panel Cleaning: How Pure Water Maximizes PV Output</a></h3>
             <p>Dust, bird droppings, and baked minerals can reduce solar panel output by up to 25%. Learn why deionized water is required.</p>
-            <a class="link-more mx-auto" href="blog-details.html?id=13">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            <a class="link-more text-start" href="blog-details.html?id=13">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
       </div>
@@ -437,7 +443,7 @@
             </ul>
             <h3 class="h5"><a href="blog-details.html?id=14">Glass Balustrade &amp; Pool Fence Maintenance in Coastal Climates</a></h3>
             <p>How maritime salt mist, chlorine splashes, and sunscreen residues etch outdoor glass, and how hydrophobic sealants protect them.</p>
-            <a class="link-more mx-auto" href="blog-details.html?id=14">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            <a class="link-more text-start" href="blog-details.html?id=14">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
       </div>
@@ -457,7 +463,7 @@
             </ul>
             <h3 class="h5"><a href="blog-details.html?id=15">Exterior Architectural Glass Detailing: Canopies &amp; Atriums</a></h3>
             <p>How external entrance canopies and glass walkways accumulate environmental pollution and how scheduled deionized rinses restore clarity.</p>
-            <a class="link-more mx-auto" href="blog-details.html?id=15">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            <a class="link-more text-start" href="blog-details.html?id=15">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
       </div>
@@ -477,7 +483,7 @@
             </ul>
             <h3 class="h5"><a href="blog-details.html?id=16">Autumn &amp; Winter Glass Care: Protecting Panes from Frost &amp; Salts</a></h3>
             <p>Cold weather road salts and acidic winter rains accelerate frame corrosion. Here is how hydrophobic treatments preserve glass brilliance.</p>
-            <a class="link-more mx-auto" href="blog-details.html?id=16">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            <a class="link-more text-start" href="blog-details.html?id=16">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
       </div>
@@ -497,7 +503,7 @@
             </ul>
             <h3 class="h5"><a href="blog-details.html?id=17">Spring Pollen Defense: Keeping Windows Clear During Peak Bloom</a></h3>
             <p>Pine and tree pollen create a sticky yellow film that bakes into hot glass. Learn early-season preventive rinse techniques.</p>
-            <a class="link-more mx-auto" href="blog-details.html?id=17">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            <a class="link-more text-start" href="blog-details.html?id=17">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
       </div>
@@ -517,7 +523,7 @@
             </ul>
             <h3 class="h5"><a href="blog-details.html?id=18">Summer Window Cleaning Rules: Why Direct Sunlight Causes Streaks</a></h3>
             <p>Washing glass under intense midday heat causes water to evaporate prematurely, leaving mineral lines. Here are optimal cleaning hours.</p>
-            <a class="link-more mx-auto" href="blog-details.html?id=18">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            <a class="link-more text-start" href="blog-details.html?id=18">Read article <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
       </div>
@@ -555,7 +561,7 @@
               <span class="season-spec-value">Track &amp; Screen Detailing</span>
             </div>
           </div>
-          <a class="link-more mt-auto" href="blog-details.html?id=17">Read Spring Guide <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+          <a class="link-more text-start mt-auto" href="blog-details.html?id=17">Read Spring Guide <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
 
@@ -579,7 +585,7 @@
               <span class="season-spec-value">0-TDS Pure Water Rinse</span>
             </div>
           </div>
-          <a class="link-more mt-auto" href="blog-details.html?id=18">Read Summer Rules <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+          <a class="link-more text-start mt-auto" href="blog-details.html?id=18">Read Summer Rules <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
 
@@ -603,7 +609,7 @@
               <span class="season-spec-value">Hydrophobic Sealing</span>
             </div>
           </div>
-          <a class="link-more mt-auto" href="blog-details.html?id=16">Read Autumn Care <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+          <a class="link-more text-start mt-auto" href="blog-details.html?id=16">Read Autumn Care <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
 
@@ -627,7 +633,7 @@
               <span class="season-spec-value">Frost Defense Wash</span>
             </div>
           </div>
-          <a class="link-more mt-auto" href="blog-details.html?id=16">Read Winter Guide <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+          <a class="link-more text-start mt-auto" href="blog-details.html?id=16">Read Winter Guide <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>

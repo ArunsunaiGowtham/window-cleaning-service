@@ -352,40 +352,51 @@ img {
   border-color: var(--sp-brand);
 }
 
-/* Direction & Theme Toggle Pill Buttons (Matches Reference) */
+/* Direction & Theme Toggle Buttons - Circular Shape, No SVG Icon */
 .dir-toggle-pill,
-.theme-toggle-pill,
-.mobile-nav button[data-theme-toggle],
-.mobile-nav .icon-btn.flex-fill,
 .icon-btn.dir-toggle,
 button[data-dir-toggle],
 #dirToggle {
-  width: auto !important;
-  min-width: 82px;
+  width: 42px !important;
+  min-width: 42px !important;
+  max-width: 42px !important;
   height: 42px !important;
-  padding: 0 16px !important;
-  border-radius: 999px !important;
+  min-height: 42px !important;
+  max-height: 42px !important;
+  border-radius: 50% !important;
+  padding: 0 !important;
   border: 1.5px solid var(--sp-border) !important;
   background: var(--sp-surface) !important;
   color: var(--sp-ink) !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 8px !important;
+  gap: 0 !important;
   font-family: var(--sp-font-sans, inherit);
   font-weight: 700 !important;
-  font-size: 0.9rem !important;
+  font-size: 0.82rem !important;
   line-height: 1 !important;
   cursor: pointer;
   text-decoration: none;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
   user-select: none;
+  flex-shrink: 0 !important;
 }
 
-.icon-btn.flex-fill {
-  border-radius: 999px !important;
-  width: auto !important;
+.theme-toggle-pill,
+.mobile-nav button[data-theme-toggle] {
+  width: 42px !important;
+  min-width: 42px !important;
+  max-width: 42px !important;
+  height: 42px !important;
+  min-height: 42px !important;
+  max-height: 42px !important;
+  border-radius: 50% !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .dir-toggle-pill:hover,
@@ -412,16 +423,11 @@ button[data-dir-toggle]:active,
   transform: translateY(0);
 }
 
-.dir-toggle-pill .dir-toggle-icon,
-.icon-btn.dir-toggle .dir-toggle-icon,
-button[data-dir-toggle] .dir-toggle-icon,
-#dirToggle .dir-toggle-icon {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
-  display: inline-block;
-  vertical-align: middle;
-  color: currentColor;
+.dir-toggle-icon {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  visibility: hidden !important;
 }
 
 .theme-toggle-pill i,
@@ -441,7 +447,7 @@ button[data-dir-toggle] .dir-toggle-icon,
 button[data-dir-toggle] span,
 #dirToggle span {
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   letter-spacing: 0.02em;
   color: currentColor;
 }
@@ -768,11 +774,15 @@ textarea.form-control {
   .site-header .nav-actions .dir-toggle-pill,
   .site-header .nav-actions button[data-dir-toggle],
   .site-header .nav-actions #dirToggle {
-    padding: 0 8px !important;
-    font-size: .8rem !important;
-    gap: 4px !important;
+    width: 38px !important;
+    min-width: 38px !important;
+    max-width: 38px !important;
     height: 38px !important;
     min-height: 38px !important;
+    max-height: 38px !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    font-size: .78rem !important;
   }
 
   .site-header .nav-actions .icon-btn {
@@ -1110,17 +1120,20 @@ textarea.form-control {
 .site-header .nav-actions .dir-toggle-pill,
 .site-header .nav-actions button[data-dir-toggle],
 .site-header .nav-actions #dirToggle {
+  width: 42px !important;
+  min-width: 42px !important;
+  max-width: 42px !important;
   height: 42px !important;
   min-height: 42px !important;
   max-height: 42px !important;
-  padding: 0 16px !important;
-  font-size: 0.9rem !important;
+  padding: 0 !important;
+  font-size: 0.82rem !important;
   line-height: 1 !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 8px !important;
-  border-radius: 999px !important;
+  gap: 0 !important;
+  border-radius: 50% !important;
   box-sizing: border-box;
   flex-shrink: 0;
 }
@@ -5286,7 +5299,7 @@ html[dir="rtl"] .footer-social {
   .footer-newsletter .btn {
     width: 100%;
     flex: none;
-    border-radius: var(--sp-radius-sm) !important;
+    border-radius: 999px !important;
   }
 
   .footer-newsletter .form-control {
@@ -5440,7 +5453,7 @@ h6 {
   font-weight: 600 !important;
   white-space: nowrap !important;
   line-height: 1 !important;
-  border-radius: var(--sp-radius-sm) !important;
+  border-radius: 999px !important;
   box-sizing: border-box !important;
 }
 
@@ -5607,11 +5620,11 @@ h6 {
 }
 
 .dash-sidebar-ref:not(.offcanvas) {
-  width: 260px;
-  flex: 0 0 260px;
+  width: 280px;
+  flex: 0 0 280px;
   background: #ffffff;
   border-right: 1px solid #e2e8f0;
-  padding: 1.5rem 0.85rem;
+  padding: 1.5rem 1rem;
   position: sticky;
   top: 0;
   height: 100vh;
@@ -6130,9 +6143,9 @@ h6 {
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .dash-sidebar-ref:not(.offcanvas) {
-    width: 240px;
-    flex: 0 0 240px;
-    padding: 1.25rem 0.75rem;
+    width: 260px;
+    flex: 0 0 260px;
+    padding: 1.25rem 0.85rem;
   }
 
   .dash-topbar-ref {
@@ -6158,10 +6171,16 @@ h6 {
     flex-shrink: 0 !important;
   }
 
-  .dash-topbar-ref .dir-toggle-pill {
-    padding: 0 8px !important;
-    font-size: 0.8rem !important;
+  .dash-topbar-ref .dir-toggle-pill,
+  .dash-topbar-ref #dirToggle {
+    width: 38px !important;
+    min-width: 38px !important;
+    max-width: 38px !important;
     height: 38px !important;
+    min-height: 38px !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    font-size: 0.78rem !important;
   }
 
   .dash-topbar-ref .icon-btn {
@@ -6610,6 +6629,9 @@ h6 {
   font-weight: 700;
   color: var(--sp-ink);
   margin-bottom: 0.6rem;
+  min-height: 2.8rem;
+  display: flex;
+  align-items: center;
 }
 
 .season-roadmap-card p {
@@ -6617,7 +6639,7 @@ h6 {
   color: var(--sp-muted);
   line-height: 1.55;
   margin-bottom: 1.25rem;
-  flex-grow: 1;
+  min-height: 4.8rem;
 }
 
 .season-specs {
@@ -6628,6 +6650,16 @@ h6 {
   border-top: 1px dashed var(--sp-border);
   margin-bottom: 1.25rem;
   font-size: 0.85rem;
+  min-height: 6.5rem;
+  justify-content: center;
+}
+
+.season-roadmap-card .link-more {
+  margin-top: auto !important;
+  margin-inline: 0 auto !important;
+  align-self: flex-start !important;
+  justify-content: flex-start !important;
+  text-align: start !important;
 }
 
 .season-spec-item {

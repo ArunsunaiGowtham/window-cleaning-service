@@ -74,7 +74,7 @@
         </ul>
         <div class="nav-actions">
           <button class="icon-btn" type="button" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false"><i class="bi bi-moon-stars" aria-hidden="true"></i></button>
-          <button class="dir-toggle-pill" type="button" id="dirToggle" data-dir-toggle aria-label="Switch to right to left layout"><svg class="dir-toggle-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16M15 4l5 4-5 4M20 16H4M9 12l-5 4 5 4"/></svg><span class="dir-toggle-text" aria-hidden="true">RTL</span></button>
+          <button class="icon-btn dir-toggle" type="button" id="dirToggle" data-dir-toggle aria-label="Switch to right to left layout"><span class="dir-toggle-text" aria-hidden="true">RTL</span></button>
           <a class="btn btn-outline-brand" href="customer-dashboard.html">Dashboard</a>
           <a class="btn btn-brand" href="login.html">Login</a>
         </div>
@@ -116,7 +116,7 @@
       <div class="d-grid gap-2">
         <div class="d-flex gap-2">
           <button class="theme-toggle-pill flex-fill" type="button" data-theme-toggle aria-label="Toggle dark mode"><i class="bi bi-moon-stars" aria-hidden="true"></i><span class="theme-toggle-text" aria-hidden="true">Dark</span></button>
-          <button class="dir-toggle-pill flex-fill" type="button" data-dir-toggle aria-label="Switch text direction"><svg class="dir-toggle-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16M15 4l5 4-5 4M20 16H4M9 12l-5 4 5 4"/></svg><span class="dir-toggle-text" aria-hidden="true">RTL</span></button>
+          <button class="dir-toggle-pill flex-fill" type="button" data-dir-toggle aria-label="Switch text direction"><span class="dir-toggle-text" aria-hidden="true">RTL</span></button>
         </div>
         <a class="btn btn-outline-brand" href="customer-dashboard.html">Dashboard</a>
         <a class="btn btn-brand" href="login.html">Login</a>
@@ -130,7 +130,13 @@
   <div class="page-hero-bg">
     <img src="assets/images/hero/about-hero.jpg" alt="CrystalClean window cleaning company leadership and pure water fleet" width="1920" height="700">
   </div>
-  <div class="container page-hero-content">
+  <div class="container page-hero-content text-center">
+    <nav class="hero-breadcrumb" aria-label="Breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">About Us</li>
+      </ol>
+    </nav>
     <p class="eyebrow" data-aos="fade-up">Our Heritage &amp; Mission</p>
     <h1 data-aos="fade-up" data-aos-delay="60">About CrystalClean Window Services</h1>
     <p class="lead" data-aos="fade-up" data-aos-delay="120">Pioneers in zero-TDS pure water glass technology, delivering spotless, streak-free views to thousands of residential and commercial clients.</p>
@@ -519,29 +525,39 @@
 <!-- Testimonials -->
 <section class="section bg-soft testimonials-section about-testimonials">
   <div class="container">
-    <div class="section-head text-center" data-aos="fade-up">
+    <div class="section-head text-center mx-auto" data-aos="fade-up">
       <p class="eyebrow">Client Feedback</p>
       <h2>Rated 4.9/5 by 3,400+ Satisfied Property Owners</h2>
     </div>
     <div class="swiper testimonial-swiper" data-aos="fade-up">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <figure class="testimonial-card">
-            <span class="stars mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
-            <blockquote><p>&ldquo;No ladders propped against our fresh gutters, zero chemical stench, and the glass stayed spotless for over 2 months. We’ve set up a quarterly booking and haven’t looked back!&rdquo;</p></blockquote>
-            <figcaption>
+          <figure class="testimonial-card text-center">
+            <span class="stars mb-2 justify-content-center"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
+            <blockquote class="text-center"><p class="text-center">&ldquo;No ladders propped against our fresh gutters, zero chemical stench, and the glass stayed spotless for over 2 months. We’ve set up a quarterly booking and haven’t looked back!&rdquo;</p></blockquote>
+            <figcaption class="justify-content-center">
               <img src="assets/images/testimonials/customer-01.webp" width="56" height="56" loading="lazy" alt="Sofia Mendes">
               <span><strong>Sofia Mendes</strong><small>Homeowner, Riverside</small></span>
             </figcaption>
           </figure>
         </div>
         <div class="swiper-slide">
-          <figure class="testimonial-card">
-            <span class="stars mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
-            <blockquote><p>&ldquo;Marcus and the high-rise team completed our 18-storey tower facade ahead of schedule. Flawless safety compliance and crystal clear results.&rdquo;</p></blockquote>
-            <figcaption>
+          <figure class="testimonial-card text-center">
+            <span class="stars mb-2 justify-content-center"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
+            <blockquote class="text-center"><p class="text-center">&ldquo;Marcus and the high-rise team completed our 18-storey tower facade ahead of schedule. Flawless safety compliance and crystal clear results.&rdquo;</p></blockquote>
+            <figcaption class="justify-content-center">
               <img src="assets/images/testimonials/customer-02.webp" width="56" height="56" loading="lazy" alt="Daniel Okafor">
               <span><strong>Daniel Okafor</strong><small>Commercial Facility Director</small></span>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="swiper-slide">
+          <figure class="testimonial-card text-center">
+            <span class="stars mb-2 justify-content-center"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
+            <blockquote class="text-center"><p class="text-center">&ldquo;We have a conservatory roof that was covered in green moss and black pollution dirt. The CrystalClean crew cleaned the entire glass ceiling and sills in under two hours. It feels like a brand new sunroom!&rdquo;</p></blockquote>
+            <figcaption class="justify-content-center">
+              <img src="assets/images/testimonials/customer-03.webp" width="56" height="56" loading="lazy" alt="Priya Raman">
+              <span><strong>Priya Raman</strong><small>Villa Owner, Northgate</small></span>
             </figcaption>
           </figure>
         </div>

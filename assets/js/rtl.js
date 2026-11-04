@@ -4,19 +4,21 @@
   const KEY = "crystalclean-dir";
   const root = document.documentElement;
 
-  const arrowSvg = `<svg class="dir-toggle-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16M15 4l5 4-5 4M20 16H4M9 12l-5 4 5 4"/></svg>`;
-
   const setupButton = (btn, dir) => {
-    const icon = btn.querySelector(".dir-toggle-icon");
-    const span = btn.querySelector(".dir-toggle-text");
+    const span = btn.querySelector(".dir-toggle-text") || btn.querySelector("span");
     const targetText = dir === "rtl" ? "LTR" : "RTL";
 
-    if (!icon || !span) {
-      btn.innerHTML = `${arrowSvg}<span class="dir-toggle-text" aria-hidden="true">${targetText}</span>`;
+    // Remove any SVG icons from the button
+    const icon = btn.querySelector(".dir-toggle-icon, svg");
+    if (icon) {
+      icon.remove();
+    }
+
+    if (!span) {
+      btn.innerHTML = `<span class="dir-toggle-text" aria-hidden="true">${targetText}</span>`;
     } else {
       span.textContent = targetText;
     }
-    btn.classList.add("dir-toggle-pill");
     btn.classList.toggle("is-rtl", dir === "rtl");
     btn.setAttribute("aria-label", dir === "rtl" ? "Switch to left to right layout" : "Switch to right to left layout");
   };
