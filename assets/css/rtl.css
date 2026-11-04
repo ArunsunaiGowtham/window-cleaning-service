@@ -15,10 +15,18 @@
 }
 
 /* Typography & Headings */
-[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3,
-[dir="rtl"] h4, [dir="rtl"] h5, [dir="rtl"] h6,
-[dir="rtl"] .h1, [dir="rtl"] .h2, [dir="rtl"] .h3,
-[dir="rtl"] .h4, [dir="rtl"] .h5, [dir="rtl"] .h6 {
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6,
+[dir="rtl"] .h1,
+[dir="rtl"] .h2,
+[dir="rtl"] .h3,
+[dir="rtl"] .h4,
+[dir="rtl"] .h5,
+[dir="rtl"] .h6 {
   text-align: right;
 }
 
@@ -53,10 +61,22 @@
 }
 
 /* Directional Icons & Quotations */
-[dir="rtl"] .bi-arrow-right::before { content: "\f12f"; }
-[dir="rtl"] .bi-arrow-left::before { content: "\f138"; }
-[dir="rtl"] .bi-chevron-right::before { content: "\f284"; }
-[dir="rtl"] .bi-chevron-left::before { content: "\f285"; }
+[dir="rtl"] .bi-arrow-right::before {
+  content: "\f12f";
+}
+
+[dir="rtl"] .bi-arrow-left::before {
+  content: "\f138";
+}
+
+[dir="rtl"] .bi-chevron-right::before {
+  content: "\f284";
+}
+
+[dir="rtl"] .bi-chevron-left::before {
+  content: "\f285";
+}
+
 [dir="rtl"] .link-more .bi,
 [dir="rtl"] .more .bi,
 [dir="rtl"] .btn .bi-arrow-right {
@@ -70,12 +90,12 @@
   padding-inline-end: 0;
 }
 
-[dir="rtl"] .breadcrumb-item + .breadcrumb-item {
+[dir="rtl"] .breadcrumb-item+.breadcrumb-item {
   padding-right: .5rem;
   padding-left: 0;
 }
 
-[dir="rtl"] .breadcrumb-item + .breadcrumb-item::before {
+[dir="rtl"] .breadcrumb-item+.breadcrumb-item::before {
   float: right;
   padding-left: .5rem;
   padding-right: 0;
@@ -124,7 +144,7 @@
 }
 
 @media (min-width: 992px) {
-  [dir="rtl"] .main-nav .navbar-nav > .nav-item.dropdown > .dropdown-menu {
+  [dir="rtl"] .main-nav .navbar-nav>.nav-item.dropdown>.dropdown-menu {
     right: 0 !important;
     left: auto !important;
   }
@@ -163,7 +183,7 @@
   margin-inline-end: 0;
 }
 
-[dir="rtl"] .stats-band .stat-card > div {
+[dir="rtl"] .stats-band .stat-card>div {
   justify-content: center;
 }
 
@@ -241,8 +261,13 @@
   margin-left: 0;
 }
 
-[dir="rtl"] .swiper-button-prev::after { content: "next"; }
-[dir="rtl"] .swiper-button-next::after { content: "prev"; }
+[dir="rtl"] .swiper-button-prev::after {
+  content: "next";
+}
+
+[dir="rtl"] .swiper-button-next::after {
+  content: "prev";
+}
 
 /* 4. Forms & Controls ------------------------------------- */
 [dir="rtl"] .form-control,
@@ -267,7 +292,7 @@
   display: block;
 }
 
-[dir="rtl"] .form-floating > label {
+[dir="rtl"] .form-floating>label {
   right: 0;
   left: auto;
   transform-origin: top right;
@@ -302,14 +327,14 @@
   background-position: left center;
 }
 
-[dir="rtl"] .input-group > :not(:first-child) {
+[dir="rtl"] .input-group> :not(:first-child) {
   border-top-left-radius: 999px;
   border-bottom-left-radius: 999px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-[dir="rtl"] .input-group > :not(:last-child) {
+[dir="rtl"] .input-group> :not(:last-child) {
   border-top-right-radius: 999px;
   border-bottom-right-radius: 999px;
   border-top-left-radius: 0;
@@ -383,11 +408,12 @@
 [dir="rtl"] .post-card .link-more,
 [dir="rtl"] .post-body .link-more {
   direction: rtl;
-  margin-inline: auto;
-  align-self: center;
+  margin-inline: 0 auto !important;
+  align-self: flex-start !important;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start !important;
+  text-align: start !important;
   gap: .4rem;
 }
 
@@ -559,19 +585,19 @@ html[dir="rtl"] .footer-grid {
    Grid column 2 (center right): Quick Links
    Grid column 3 (center left): Services
    Grid column 4 (far left): Get In Touch / Contact */
-html[dir="rtl"] .footer-grid > .footer-company {
+html[dir="rtl"] .footer-grid>.footer-company {
   order: 1;
 }
 
-html[dir="rtl"] .footer-grid > [aria-labelledby="footer-quick-links"] {
+html[dir="rtl"] .footer-grid>[aria-labelledby="footer-quick-links"] {
   order: 2;
 }
 
-html[dir="rtl"] .footer-grid > [aria-labelledby="footer-services"] {
+html[dir="rtl"] .footer-grid>[aria-labelledby="footer-services"] {
   order: 3;
 }
 
-html[dir="rtl"] .footer-grid > .footer-contact-column {
+html[dir="rtl"] .footer-grid>.footer-contact-column {
   order: 4;
 }
 

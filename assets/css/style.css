@@ -232,10 +232,21 @@ img {
 }
 
 /* 3. Components ------------------------------------------- */
-.btn {
+.btn,
+.btn-sm,
+.btn-lg,
+.btn-brand,
+.btn-outline-brand,
+.btn-light-brand,
+.btn-ghost,
+.hero-actions .btn,
+.cta-actions .btn,
+.pricing-cta .btn,
+.service-cta,
+.specialist-care-cta .btn {
   --bs-btn-padding-y: .72rem;
   --bs-btn-padding-x: 1.5rem;
-  border-radius: 999px;
+  border-radius: 999px !important;
   font-weight: 600;
   min-height: 48px;
   display: inline-flex;
@@ -250,15 +261,22 @@ img {
   transform: translateY(1px);
 }
 
-.btn-brand {
-  background: var(--sp-gradient);
-  color: #fff;
+.btn-brand,
+.btn-primary {
+  background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%) !important;
+  background-color: #0ea5e9 !important;
+  color: #fff !important;
+  border: 1px solid transparent !important;
   box-shadow: 0 14px 30px -14px rgba(14, 165, 233, .6);
 }
 
 .btn-brand:hover,
-.btn-brand:focus {
-  color: #fff;
+.btn-brand:focus,
+.btn-primary:hover,
+.btn-primary:focus {
+  background: linear-gradient(135deg, #0284c7 0%, #1d4ed8 100%) !important;
+  background-color: #0284c7 !important;
+  color: #fff !important;
   box-shadow: 0 18px 34px -12px rgba(37, 99, 235, .6);
   transform: translateY(-2px);
 }
@@ -1986,7 +2004,12 @@ textarea.form-control {
 }
 
 .testimonials-section {
-  background: var(--sp-surface-2);
+  background: var(--sp-bg);
+}
+
+.home-2-feedback-section .section-head,
+.testimonials-section .section-head {
+  text-align: center;
 }
 
 .testimonial-card {
@@ -2000,9 +2023,20 @@ textarea.form-control {
   padding: 2rem;
   box-shadow: var(--sp-shadow-sm);
   margin: 0;
+  text-align: center;
 }
 
+.testimonial-card .stars {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  width: 100%;
+}
+
+.testimonial-card blockquote,
 .testimonial-card blockquote p {
+  text-align: center;
   font-size: 1.02rem;
   color: var(--sp-body);
   margin-block: 1rem;
@@ -2011,11 +2045,11 @@ textarea.form-control {
 .testimonial-card figcaption {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: .8rem;
-}
-
-.testimonial-card figcaption {
   margin-top: auto;
+  margin-inline: auto;
+  text-align: start;
 }
 
 .testimonial-card figcaption img {
@@ -2220,7 +2254,7 @@ textarea.form-control {
 }
 
 .cta-inner {
-  background: var(--sp-gradient);
+  background: linear-gradient(135deg, #091a2d 0%, #0d2847 100%) !important;
   color: #fff;
   border-radius: var(--sp-radius-lg);
   padding: clamp(2rem, 4vw, 3.2rem);
@@ -2230,6 +2264,7 @@ textarea.form-control {
   align-items: center;
   justify-content: space-between;
   box-shadow: var(--sp-shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .cta-inner h2 {
@@ -2249,20 +2284,27 @@ textarea.form-control {
 }
 
 .cta-inner .btn-brand {
-  background: #ffffff !important;
-  color: var(--sp-brand-dark, #0284c7) !important;
-  border-color: #ffffff !important;
+  background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%) !important;
+  background-color: #0ea5e9 !important;
+  color: #ffffff !important;
+  border: 1px solid transparent !important;
   font-weight: 700 !important;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18) !important;
+  border-radius: 999px !important;
+  box-shadow: 0 10px 25px rgba(14, 165, 233, 0.45) !important;
 }
 
 .cta-inner .btn-brand:hover,
 .cta-inner .btn-brand:focus {
-  background: #f0f9ff !important;
-  color: #0369a1 !important;
-  border-color: #f0f9ff !important;
+  background: linear-gradient(135deg, #0284c7 0%, #1d4ed8 100%) !important;
+  background-color: #0284c7 !important;
+  color: #ffffff !important;
+  border: 1px solid transparent !important;
   transform: translateY(-2px);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25) !important;
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.55) !important;
+}
+
+.cta-inner .btn-light-brand {
+  border-radius: 999px !important;
 }
 
 .filter-bar {
@@ -2556,12 +2598,12 @@ textarea.form-control {
   font-weight: 700;
   font-size: .88rem;
   margin-top: auto;
-  margin-inline: auto;
-  align-self: center;
+  margin-inline: 0 auto;
+  align-self: flex-start;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-start;
+  text-align: start;
   gap: .4rem;
   color: var(--sp-brand-dark);
   text-decoration: none;
@@ -2575,9 +2617,10 @@ textarea.form-control {
 
 .post-card .link-more,
 .post-body .link-more {
-  margin-inline: auto;
-  align-self: center;
-  text-align: center;
+  margin-inline: 0 auto !important;
+  align-self: flex-start !important;
+  text-align: start !important;
+  justify-content: flex-start !important;
 }
 
 /* Reference Blog Filter Header Card */
@@ -5019,10 +5062,54 @@ body:has(.hero) .hero {
   min-height: 44px;
   padding: .58rem 1.2rem;
   font-size: .92rem;
+  border-radius: 999px !important;
 }
 
 .hero-actions .btn-brand {
   padding-inline: 1.35rem;
+}
+
+/* Home 2 Hero Actions - Horizontally aligned with consistent pill corner radius */
+.home-2-hero-actions,
+.home-2-hero .hero-actions {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 0.85rem 1rem !important;
+}
+
+.home-2-hero-actions .btn {
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 48px !important;
+  padding: 0.65rem 1.35rem !important;
+  font-size: 0.95rem !important;
+  border-radius: 999px !important;
+}
+
+@media (max-width: 575.98px) {
+  .home-2-hero-actions {
+    flex-direction: row !important;
+    gap: 0.5rem !important;
+  }
+  .home-2-hero-actions .btn {
+    width: auto !important;
+    flex: 1 1 auto !important;
+    padding: 0.6rem 0.9rem !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+/* Visual separation for alternate sections */
+.why-section {
+  background: var(--sp-surface-2);
+}
+
+.specialist-services-section {
+  background: var(--sp-surface-2);
 }
 
 .stats-band .stat-card {
