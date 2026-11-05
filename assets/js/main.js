@@ -179,7 +179,7 @@
           autoplay: reduced ? false : { delay: 6000, disableOnInteraction: false },
           pagination: { el: ".testimonial-swiper .swiper-pagination", clickable: true },
           navigation: { nextEl: ".testimonial-swiper .swiper-button-next", prevEl: ".testimonial-swiper .swiper-button-prev" },
-          breakpoints: { 768: { slidesPerView: 2 }, 1200: { slidesPerView: 3 } }
+          breakpoints: { 768: { slidesPerView: 2 }, 992: { slidesPerView: 3 } }
         });
       }
       if (document.querySelector(".logo-swiper")) {

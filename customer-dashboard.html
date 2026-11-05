@@ -977,17 +977,6 @@
       });
     });
 
-    // Brand logo stays on dashboard and switches to #tabViewDashboard
-    document.querySelectorAll('.brand-box').forEach(brand => {
-      brand.addEventListener('click', function(e) {
-        e.preventDefault();
-        switchTab('#tabViewDashboard');
-        if (this.closest('#sidebarOffcanvas')) {
-          hideMobileOffcanvas();
-        }
-      });
-    });
-
     // Active Service Job synchronization (Sidebar select, mobile offcanvas select & topbar pill)
     const jobData = {
       'CC-4821': { name: 'Job #CC-4821 (Oakridge Estate)', short: '#CC-4821' },

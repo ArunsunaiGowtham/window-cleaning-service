@@ -1469,7 +1469,7 @@ textarea.form-control {
   text-decoration: underline;
 }
 
-.hero-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+.hero-breadcrumb .breadcrumb-item+.breadcrumb-item::before {
   color: rgba(255, 255, 255, 0.65) !important;
   content: "/";
   padding: 0 0.55rem;
@@ -2267,57 +2267,87 @@ textarea.form-control {
 }
 
 .cta-inner {
-  background: linear-gradient(135deg, #091a2d 0%, #0d2847 100%) !important;
+  background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%) !important;
   color: #fff;
   border-radius: var(--sp-radius-lg);
-  padding: clamp(2rem, 4vw, 3.2rem);
+  padding: clamp(2.5rem, 5vw, 3.8rem) clamp(1.5rem, 4vw, 3rem);
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
   box-shadow: var(--sp-shadow-lg);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.cta-inner>div:first-child,
+.cta-inner .cta-content {
+  text-align: center;
+  margin-inline: auto;
+  max-width: 48rem;
 }
 
 .cta-inner h2 {
   color: #fff;
+  text-align: center;
+  margin-bottom: 0.65rem;
+  letter-spacing: -0.015em;
 }
 
 .cta-inner p {
-  color: rgba(255, 255, 255, .88);
-  max-width: 34rem;
+  color: rgba(255, 255, 255, .92);
+  max-width: 40rem;
+  margin-inline: auto;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.6;
 }
 
 .cta-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: .75rem;
+  gap: 1rem;
   align-items: center;
+  justify-content: center;
+  margin-inline: auto;
 }
 
 .cta-inner .btn-brand {
-  background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%) !important;
-  background-color: #0ea5e9 !important;
-  color: #ffffff !important;
-  border: 1px solid transparent !important;
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  color: var(--sp-brand-dark, #0284c7) !important;
+  border: 1px solid #ffffff !important;
   font-weight: 700 !important;
   border-radius: 999px !important;
-  box-shadow: 0 10px 25px rgba(14, 165, 233, 0.45) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
 }
 
 .cta-inner .btn-brand:hover,
 .cta-inner .btn-brand:focus {
-  background: linear-gradient(135deg, #0284c7 0%, #1d4ed8 100%) !important;
-  background-color: #0284c7 !important;
-  color: #ffffff !important;
-  border: 1px solid transparent !important;
+  background: #f0f9ff !important;
+  background-color: #f0f9ff !important;
+  color: #0369a1 !important;
+  border-color: #f0f9ff !important;
   transform: translateY(-2px);
-  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.55) !important;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22) !important;
 }
 
 .cta-inner .btn-light-brand {
+  background: rgba(255, 255, 255, 0.16) !important;
+  color: #ffffff !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+  backdrop-filter: blur(8px);
   border-radius: 999px !important;
+  font-weight: 600;
+}
+
+.cta-inner .btn-light-brand:hover,
+.cta-inner .btn-light-brand:focus {
+  background: rgba(255, 255, 255, 0.28) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.55) !important;
+  transform: translateY(-2px);
 }
 
 .filter-bar {
@@ -4345,8 +4375,8 @@ html[dir="rtl"] .auth-input:has(.auth-toggle-pass)>.form-control {
 .contact-form .contact-message .form-label,
 .contact-form .contact-message label,
 .contact-form label[for="ctMsg"],
-.booking-panel .form-floating:has(textarea) > label,
-.form-floating:has(textarea) > label {
+.booking-panel .form-floating:has(textarea)>label,
+.form-floating:has(textarea)>label {
   position: static !important;
   transform: none !important;
   opacity: 1 !important;
@@ -4365,8 +4395,8 @@ html[dir="rtl"] .auth-input:has(.auth-toggle-pass)>.form-control {
 
 .contact-form .contact-message textarea.form-control,
 .contact-form textarea#ctMsg,
-.booking-panel .form-floating:has(textarea) > textarea.form-control,
-.form-floating:has(textarea) > textarea.form-control {
+.booking-panel .form-floating:has(textarea)>textarea.form-control,
+.form-floating:has(textarea)>textarea.form-control {
   position: static !important;
   padding: 0.85rem 1rem !important;
   min-height: 120px;
@@ -4452,16 +4482,16 @@ html[dir="rtl"] .form-floating:has(textarea) {
 html[dir="rtl"] .contact-form .contact-message .form-label,
 html[dir="rtl"] .contact-form .contact-message label,
 html[dir="rtl"] .contact-form label[for="ctMsg"],
-html[dir="rtl"] .booking-panel .form-floating:has(textarea) > label,
-html[dir="rtl"] .form-floating:has(textarea) > label {
+html[dir="rtl"] .booking-panel .form-floating:has(textarea)>label,
+html[dir="rtl"] .form-floating:has(textarea)>label {
   text-align: right !important;
   direction: rtl !important;
 }
 
 html[dir="rtl"] .contact-form .contact-message textarea.form-control,
 html[dir="rtl"] .contact-form textarea#ctMsg,
-html[dir="rtl"] .booking-panel .form-floating:has(textarea) > textarea.form-control,
-html[dir="rtl"] .form-floating:has(textarea) > textarea.form-control {
+html[dir="rtl"] .booking-panel .form-floating:has(textarea)>textarea.form-control,
+html[dir="rtl"] .form-floating:has(textarea)>textarea.form-control {
   padding-right: 1rem !important;
   padding-left: 1rem !important;
   text-align: right !important;
@@ -5108,6 +5138,7 @@ body:has(.hero) .hero {
     flex-direction: row !important;
     gap: 0.5rem !important;
   }
+
   .home-2-hero-actions .btn {
     width: auto !important;
     flex: 1 1 auto !important;
@@ -5458,6 +5489,7 @@ h6 {
 }
 
 @media (min-width: 992px) {
+
   .col-lg-3 .price-card,
   .col-lg-3 .pricing-card,
   .col-xl-3 .price-card,
@@ -5536,15 +5568,18 @@ h6 {
 }
 
 @media (max-width: 575.98px) {
+
   .before-after-label-left,
   .before-after-label-right {
     top: 0.75rem;
     padding: 0.3rem 0.65rem;
     font-size: 0.74rem;
   }
+
   .before-after-label-left {
     left: 0.75rem;
   }
+
   .before-after-label-right {
     right: 0.75rem;
   }
@@ -6306,15 +6341,18 @@ h6 {
   .hero-trust-badge {
     gap: 0.55rem;
   }
+
   .hero-trust-icon {
     width: 38px;
     height: 38px;
     min-width: 38px;
     font-size: 1.15rem;
   }
+
   .hero-trust-title {
     font-size: 0.84rem;
   }
+
   .hero-trust-sub {
     font-size: 0.75rem;
   }
@@ -6374,6 +6412,7 @@ h6 {
 }
 
 @media (min-width: 768px) {
+
   .specialist-care-title,
   .specialist-services-section .card h4 {
     height: 3.15rem;
@@ -6618,10 +6657,25 @@ h6 {
   width: fit-content;
 }
 
-.season-badge.spring { background: rgba(16, 185, 129, 0.12); color: #059669; }
-.season-badge.summer { background: rgba(245, 158, 11, 0.12); color: #d97706; }
-.season-badge.autumn { background: rgba(249, 115, 22, 0.12); color: #ea580c; }
-.season-badge.winter { background: rgba(14, 165, 233, 0.12); color: #0284c7; }
+.season-badge.spring {
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
+}
+
+.season-badge.summer {
+  background: rgba(245, 158, 11, 0.12);
+  color: #d97706;
+}
+
+.season-badge.autumn {
+  background: rgba(249, 115, 22, 0.12);
+  color: #ea580c;
+}
+
+.season-badge.winter {
+  background: rgba(14, 165, 233, 0.12);
+  color: #0284c7;
+}
 
 .season-roadmap-card h3 {
   font-size: 1.15rem;
